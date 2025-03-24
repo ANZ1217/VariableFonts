@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tizen.Applications.ComponentBased</name>
+    </assembly>
+    <members>
+        <member name="T:Tizen.Applications.ComponentBased.Common.BaseComponent">
+            <summary>
+            Represents the base class for components, providing common functionalities for both FrameComponent and ServiceComponent.
+            </summary>
+            <remarks>
+            This class cannot be registered directly by ComponentBased applications.
+            It serves as a base class to be inherited by other components.
+            </remarks>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="E:Tizen.Applications.ComponentBased.Common.BaseComponent.LowMemory">
+            <summary>
+            Occurs when the system memory is low.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="E:Tizen.Applications.ComponentBased.Common.BaseComponent.LowBattery">
+            <summary>
+            Occurs when the system battery is low.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="E:Tizen.Applications.ComponentBased.Common.BaseComponent.LocaleChanged">
+            <summary>
+            Occurs when the system language is chagned.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="E:Tizen.Applications.ComponentBased.Common.BaseComponent.RegionFormatChanged">
+            <summary>
+            Occurs when the region format is changed.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="E:Tizen.Applications.ComponentBased.Common.BaseComponent.DeviceOrientationChanged">
+            <summary>
+            Occurs when the device orientation is changed.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="E:Tizen.Applications.ComponentBased.Common.BaseComponent.SuspendedStateChanged">
+            <summary>
+            Occurs when the device orientation is changed.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="E:Tizen.Applications.ComponentBased.Common.BaseComponent.TimeZoneChanged">
+            <summary>
+            Occurs when the time zone is changed.
+            </summary>
+            <since_tizen> 11 </since_tizen>
+        </member>
+        <member name="P:Tizen.Applications.ComponentBased.Common.BaseComponent.Id">
+            <summary>
+            Gets the unique instance ID of the component.
+            It will be created after OnCreate method is invoked.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="P:Tizen.Applications.ComponentBased.Common.BaseComponent.ComponentId">
+            <summary>
+            Gets the ID of the component.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="P:Tizen.Applications.ComponentBased.Common.BaseComponent.Parent">
+            <summary>
+            Gets the parent application object to which the component belongs.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.BaseComponent.Finish">
+            <summary>
+            Finishes the current component.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="P:Tizen.Applications.ComponentBased.Common.BaseComponent.ContextHandle">
+            <summary>
+            A Context Handle
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.BaseComponent.OnRestoreContents(Tizen.Applications.Bundle)">
+            <summary>
+            Override this method to handle restoring the previous state of the component.
+            </summary>
+            <param name="c">A bundle containing the saved state of the component. It can only be used within the callback. To use it outside, create a copy.</param>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.BaseComponent.OnSaveContent(Tizen.Applications.Bundle)">
+            <summary>
+            Override this method to handle saving the current state of the component.
+            </summary>
+            <param name="c">A bundle containing the current state of the component. It can only be used within the callback. To use it outside, create a copy.</param>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.BaseComponent.SendLaunchRequestAsync(Tizen.Applications.AppControl,Tizen.Applications.AppControlReplyCallback)">
+            <summary>
+            Sends a launch request asynchronously.
+            </summary>
+            <remarks>
+            Use this method to send a launch request with group mode enabled.
+            If group mode is not required, you can use SendLaunchRequestAsync() instead.
+            </remarks>
+            <param name="control">The AppControl object representing the request details.</param>
+            <param name="replyAfterLaunching">The callback function to be invoked when the reply is received.</param>
+            <returns>A task representing the result of the launch request.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when failed because of the argument is invalid.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when there is a failure in setting the component information in the AppControl.</exception>
+            <exception cref="T:Tizen.Applications.Exceptions.AppNotFoundException">Thrown when the target application is not found.</exception>
+            <exception cref="T:Tizen.Applications.Exceptions.LaunchRejectedException">Thrown when the launch request is rejected.</exception>
+            <privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="T:Tizen.Applications.ComponentBased.Common.ComponentBasedApplication">
+            <summary>
+            Represents the base class for a multi-component based application.
+            This class allows the creation and management of multiple application components, such as Frame, Service, and Widget components.
+            </summary>
+            <remarks>
+            This abstract class provides the core structure for applications that consist of multiple components.
+            Each component has its own lifecycle, and the framework handles these lifecycles independently.
+            </remarks>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.ComponentBasedApplication.#ctor(System.Collections.Generic.IDictionary{System.Type,System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tizen.Applications.ComponentBased.Common.ComponentBasedApplication"/> class with the specified component type information.
+            </summary>
+            <param name="typeInfo">A dictionary where the key is the component class type (FrameComponent, ServiceComponent or WidgetComponent subclass),
+            and the value is the component ID defined in the tizen-manifest.xml file.</param>
+            <remarks>
+            This constructor sets up the necessary callbacks for the application lifecycle and registers the provided components.
+            </remarks>
+            <example>
+            <code>
+            IDictionary&lt;Type, string&gt; components = new Dictionary&lt;Type, string&gt;()
+            {
+                { typeof(MyFrameComponent), "frameComponentId" },
+                { typeof(MyServiceComponent), "serviceComponentId" }
+            };
+            ComponentBasedApplication app = new MyApplication(components);
+            app.Run(args);
+            </code>
+            </example>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.ComponentBasedApplication.RegisterComponent(System.Type,System.String)">
+            <summary>
+            Registers a component with the specified type and ID.
+            </summary>
+            <param name="compType">The type of the component to register. Must be a subclass of FrameComponent, ServiceComponent, or WidgetComponent.</param>
+            <param name="compId">The ID of the component, defined in the tizen-manifest.xml file.</param>
+            <exception cref="T:System.ArgumentException">Thrown when the component type is already registered or not sub-class of FrameComponent, ServiceComponent or WidgetComponent.</exception>
+            <remarks>
+            This method ensures that only valid component types are registered. The component ID must be unique.
+            </remarks>
+            <example>
+            <code>
+            app.RegisterComponent(typeof(MyFrameComponent), "frameComponentId");
+            </code>
+            </example>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.ComponentBasedApplication.Run(System.String[])">
+            <summary>
+            Runs the application's main loop.
+            </summary>
+            <param name="args">The arguments passed from the command line.</param>
+            <exception cref="T:System.InvalidOperationException">Thrown when component type is already added to the component.</exception>
+            <example>
+            <code>
+            app.Run(args);
+            </code>
+            </example>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.ComponentBasedApplication.Exit">
+            <summary>
+            Exits the application's main loop.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.ComponentBasedApplication.OnInit(System.String[])">
+            <summary>
+            Called before the main loop starts.
+            </summary>
+            <param name="args">The arguments passed from the command line.</param>
+            <remarks>
+            Override this method to handle any initialization logic before the application enters the main event loop.
+            </remarks>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.ComponentBasedApplication.OnFinished">
+            <summary>
+            Called after the main loop exits.
+            </summary>
+            <remarks>
+            Override this method to handle any cleanup logic after the application has finished running.
+            </remarks>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.ComponentBasedApplication.OnRun">
+            <summary>
+            Called to start the main loop of the application.
+            </summary>
+            <remarks>
+            This is an abstract method that must be implemented by derived classes to define the behavior when the application starts.
+            </remarks>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.ComponentBasedApplication.OnExit">
+            <summary>
+            Called to exit the main loop of the application.
+            </summary>
+            <remarks>
+            Override this method to handle any logic needed before the application exits.
+            </remarks>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="T:Tizen.Applications.ComponentBased.Common.DisplayStatus">
+            <summary>
+            Enumeration for display status.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="F:Tizen.Applications.ComponentBased.Common.DisplayStatus.On">
+            <summary>
+            The display status is on
+            </summary>
+        </member>
+        <member name="F:Tizen.Applications.ComponentBased.Common.DisplayStatus.Off">
+            <summary>
+            The display status is off
+            </summary>
+        </member>
+        <member name="T:Tizen.Applications.ComponentBased.Common.FrameComponent">
+            <summary>
+            Represents a base class for UI components in the component-based application model.
+            This class provides methods for handling the lifecycle and state of UI components.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="P:Tizen.Applications.ComponentBased.Common.FrameComponent.DisplayStatus">
+            <summary>
+            Gets the current display status of the component.
+            </summary>
+            <value>
+            The current <see cref="P:Tizen.Applications.ComponentBased.Common.FrameComponent.DisplayStatus"/> of the component.
+            </value>
+            <exception cref="T:System.InvalidOperationException">Thrown when the display status cannot be retrieved.</exception>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.FrameComponent.OnCreate">
+            <summary>
+            Called when the component is launched. Override this method to implement custom launch behavior.
+            </summary>
+            <returns>
+            <c>true</c> if the service component is successfully created; otherwise, <c>false</c>.
+            </returns>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.FrameComponent.CreateWindowInfo">
+            <summary>
+            Called to create the window for the component. Override this method to provide a custom window.
+            This method will be called before <see cref="M:Tizen.Applications.ComponentBased.Common.FrameComponent.OnCreate"/> method.
+            </summary>
+            <returns>
+            An <see cref="T:Tizen.Applications.ComponentBased.Common.IWindowInfo"/> object that represents the created window.
+            </returns>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.FrameComponent.OnStart(Tizen.Applications.AppControl,System.Boolean)">
+            <summary>
+            Called when the component receives an app control message. Override this method to handle app control messages.
+            </summary>
+            <param name="appControl">The <see cref="T:Tizen.Applications.AppControl"/> object containing the app control data.</param>
+            <param name="restarted"><c>true</c> if the component was restarted; otherwise, <c>false</c>.</param>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.FrameComponent.OnResume">
+            <summary>
+            Called when the component is resumed. Override this method to handle resume behavior.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.FrameComponent.OnPause">
+            <summary>
+            Called when the component is paused. Override this method to handle pause behavior.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.FrameComponent.OnStop">
+            <summary>
+            Called when the component is stopped. Override this method to handle stop behavior.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.FrameComponent.OnDestroy">
+            <summary>
+            Called when the component is destroyed. Override this method to handle destruction behavior.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="T:Tizen.Applications.ComponentBased.Common.IWindowInfo">
+            <summary>
+            Interface for window information
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="P:Tizen.Applications.ComponentBased.Common.IWindowInfo.ResourceId">
+            <summary>
+            Gets window resource ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Tizen.Applications.ComponentBased.Common.IWindowProxy">
+            <summary>
+            Proxy for window
+            </summary>
+            <since_tizen> 9 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.IWindowProxy.InitializeWindow(System.Int32,System.Int32)">
+            <summary>
+            Initialize window
+            </summary>
+            <param name="width">The width of the window</param>
+            <param name="height">The height of the window</param>
+        </member>
+        <member name="T:Tizen.Applications.ComponentBased.Common.ServiceComponent">
+            <summary>
+            Represents a base class for service components in the component-based application model.
+            This class provides methods for handling the lifecycle and state of service components.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.ServiceComponent.OnCreate">
+            <summary>
+            Called when the service component is created. Override this method to implement custom creation behavior.
+            </summary>
+            <returns>
+            <c>true</c> if the service component is successfully created; otherwise, <c>false</c>.
+            </returns>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.ServiceComponent.OnStartCommand(Tizen.Applications.AppControl,System.Boolean)">
+            <summary>
+            Called when the service component receives a start command message. Override this method to handle start command behavior.
+            </summary>
+            <param name="appControl">The <see cref="T:Tizen.Applications.AppControl"/> object containing the app control data.</param>
+            <param name="restarted"><c>true</c> if the component was restarted; otherwise, <c>false</c>.</param>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.ServiceComponent.OnDestroy">
+            <summary>
+            Called when the service component is destroyed. Override this method to handle destruction behavior.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="T:Tizen.Applications.ComponentBased.Common.WidgetComponent">
+            <summary>
+            Represents a base class for widget components in the component-based application model.
+            This class provides methods for handling the lifecycle and state of widget components.
+            </summary>
+            <since_tizen> 9 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.WidgetComponent.OnCreate(System.Int32,System.Int32)">
+            <summary>
+            Called when the widget component is created. Override this method to implement custom creation behavior.
+            </summary>
+            <param name="width">The width of the widget component instance.</param>
+            <param name="height">The height of the widget component instance.</param>
+            <returns>
+            <c>true</c> if the widget component is successfully created; otherwise, <c>false</c>.
+            </returns>
+            <since_tizen> 9 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.WidgetComponent.CreateWindowInfo(System.Int32,System.Int32)">
+            <summary>
+            Called to create the window for the widget. This method will be called before the <see cref="M:Tizen.Applications.ComponentBased.Common.WidgetComponent.OnCreate(System.Int32,System.Int32)"/> method.
+            </summary>
+            <param name="width">The width of the widget window.</param>
+            <param name="height">The height of the widget window.</param>
+            <returns>
+            An <see cref="T:Tizen.Applications.ComponentBased.Common.IWindowProxy"/> object representing the window to use.
+            </returns>
+            <since_tizen> 9 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.WidgetComponent.OnStart(System.Boolean)">
+            <summary>
+            Called when the widget component is started. Override this method to handle start behavior.
+            </summary>
+            <param name="restarted">
+            <c>true</c> if the component was restarted; otherwise, <c>false</c>.
+            </param>
+            <since_tizen> 9 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.WidgetComponent.OnResume">
+            <summary>
+            Called when the widget component is resumed. Override this method to handle resume behavior.
+            </summary>
+            <since_tizen> 9 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.WidgetComponent.OnPause">
+            <summary>
+            Called when the widget component is paused. Override this method to handle pause behavior.
+            </summary>
+            <since_tizen> 9 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.WidgetComponent.OnStop">
+            <summary>
+            Called when the widget component is stopped. Override this method to handle stop behavior.
+            </summary>
+            <since_tizen> 9 </since_tizen>
+        </member>
+        <member name="M:Tizen.Applications.ComponentBased.Common.WidgetComponent.OnDestroy(System.Boolean)">
+            <summary>
+            Called when the widget component is destroyed. Override this method to handle destruction behavior.
+            </summary>
+            <param name="permanent">
+            <c>true</c> if the instance is permanent; otherwise, <c>false</c>.
+            </param>
+            <since_tizen> 9 </since_tizen>
+        </member>
+    </members>
+</doc>

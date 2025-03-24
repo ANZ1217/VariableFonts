@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tizen.System.Feedback</name>
+    </assembly>
+    <members>
+        <member name="T:Tizen.System.Feedback">
+            <summary>
+            The Feedback API provides functions to control haptic and sound.
+            The Feedback API provides the way to play and stop feedback, and get the information whether a specific pattern is supported.
+            Below is the supported pattern string:
+            Tap
+            SoftInputPanel
+            Key0
+            Key1
+            Key2
+            Key3
+            Key4
+            Key5
+            Key6
+            Key7
+            Key8
+            Key9
+            KeyStar
+            KeySharp
+            KeyBack
+            Hold
+            HardwareKeyPressed
+            HardwareKeyHold
+            Message
+            Email
+            WakeUp
+            Schedule
+            Timer
+            General
+            PowerOn
+            PowerOff
+            ChargerConnected
+            ChargingError
+            FullyCharged
+            LowBattery
+            Lock
+            UnLock
+            VibrationModeAbled
+            SilentModeDisabled
+            BluetoothDeviceConnected
+            BluetoothDeviceDisconnected
+            ListReorder
+            ListSlider
+            VolumeKeyPressed
+            </summary>
+            <privilege>
+            For controlling the haptic device:
+            http://tizen.org/privilege/haptic
+            For controlling the sound, privilege is not needed.
+            </privilege>
+            <example>
+            <code>
+            Feedback feedback = new Feedback();
+            bool res = feedback.IsSupportedPattern(FeedbackType.Vibration, "Tap");
+            </code>
+            </example>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="M:Tizen.System.Feedback.#ctor">
+            <summary>
+            Constructor of Feedback class
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <feature>
+            http://tizen.org/feature/feedback.vibration for FeedbackType.Vibration
+            </feature>
+            <exception cref="T:System.NotSupportedException">Thrown when failed because the devices (vibration and sound) are not supported.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when failed because of a system error.</exception>
+            <privilege>http://tizen.org/privilege/haptic</privilege>
+            <example>
+            <code>
+            Feedback feedback = new Feedback();
+            </code>
+            </example>
+        </member>
+        <member name="M:Tizen.System.Feedback.Finalize">
+            <summary>
+            Finalizes an instance of the Feedback class.
+            </summary>
+        </member>
+        <member name="M:Tizen.System.Feedback.IsSupportedPattern(Tizen.System.FeedbackType,System.String)">
+            <summary>
+            Gets the supported information about a specific type and pattern.
+            </summary>
+            <remarks>
+            Now, IsSupportedPattern is not working for FeedbackType.All.
+            This API is working for FeedbackType.Sound and FeedbackType.Vibration only.
+            If you use FeedbackType.All for type parameter, this API will throw ArgumentException.
+            To get the supported information for Vibration type, the application should have http://tizen.org/privilege/haptic privilege.
+            </remarks>
+            <since_tizen> 3 </since_tizen>
+            <param name="type">The feedback type.</param>
+            <param name="pattern">The feedback pattern string.</param>
+            <feature>
+            http://tizen.org/feature/feedback.vibration for FeedbackType.Vibration
+            </feature>
+            <returns>Information whether a pattern is supported.</returns>
+            <exception cref="T:System.Exception">Thrown when failed because the feedback is not initialized.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when failed because of an invalid arguament.</exception>
+            <exception cref="T:System.NotSupportedException">Thrown when failed becuase the device (haptic, sound) is not supported.</exception>
+            <exception cref="T:System.UnauthorizedAccessException">Thrown when failed because the access is not granted (No privilege).</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when failed because of a system error.</exception>
+            <privilege>http://tizen.org/privilege/haptic</privilege>
+            <example>
+            <code>
+            Feedback feedback = new Feedback();
+            bool res = feedback.IsSupportedPattern(FeedbackType.Vibration, "Tap");
+            </code>
+            </example>
+            <seealso cref="T:Tizen.System.FeedbackType"/>
+        </member>
+        <member name="M:Tizen.System.Feedback.Play(Tizen.System.FeedbackType,System.String)">
+            <summary>
+            Plays specific type of reactions that are pre-defined feedback pattern.
+            </summary>
+            <remarks>
+            To play Vibration type, app should have http://tizen.org/privilege/haptic privilege.
+            </remarks>
+            <since_tizen> 3 </since_tizen>
+            <param name="type">The feedback type.</param>
+            <param name="pattern">The feedback pattern string.</param>
+            <feature>
+            http://tizen.org/feature/feedback.vibration for FeedbackType.Vibration
+            </feature>
+            <exception cref="T:System.Exception">Thrown when failed because feedback is not initialized.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when failed because of an invalid arguament.</exception>
+            <exception cref="T:System.NotSupportedException">Thrown when failed because the device (haptic, sound) or a specific pattern is not supported.</exception>
+            <exception cref="T:System.UnauthorizedAccessException">Thrown when failed because the access is not granted(No privilege)</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when failed because of a system error.</exception>
+            <privilege>http://tizen.org/privilege/haptic</privilege>
+            <example>
+            <code>
+            Feedback feedback = new Feedback();
+            feedback.Play(FeedbackType.All, "Tap");
+            </code>
+            </example>
+            <seealso cref="T:Tizen.System.FeedbackType"/>
+            <seealso cref="M:Tizen.System.Feedback.Stop"/>
+        </member>
+        <member name="M:Tizen.System.Feedback.Stop">
+            <summary>
+            Stops various types of reactions from the feedback module.
+            </summary>
+            <remarks>
+            To stop vibration, the application should have http://tizen.org/privilege/haptic privilege.
+            </remarks>
+            <since_tizen> 3 </since_tizen>
+            <feature>
+            http://tizen.org/feature/feedback.vibration
+            </feature>
+            <exception cref="T:System.Exception">Thrown when failed because the feedback is not initialized.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when failed because of an invalid arguament</exception>
+            <exception cref="T:System.NotSupportedException">Thrown when failed because the device (haptic, sound) or a specific pattern is not supported.</exception>
+            <exception cref="T:System.UnauthorizedAccessException">Thrown when failed because the access is not granted (No privilege).</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when failed because of a system error.</exception>
+            <privilege>http://tizen.org/privilege/haptic</privilege>
+            <example>
+            <code>
+            Feedback Feedback1 = new Feedback();
+            Feedback1.Stop();
+            </code>
+            </example>
+            <seealso cref="M:Tizen.System.Feedback.Play(Tizen.System.FeedbackType,System.String)"/>
+        </member>
+        <member name="M:Tizen.System.Feedback.GetCountOfThemeInternal(Tizen.System.FeedbackType)">
+            <summary>
+            Gets the number of themes supported as described in the configuration.
+            </summary>
+            <remarks>
+            Now this internal API works for FeedbackType.Sound only, FeedbackType.Vibration is not supported.
+            Counts of theme range will be 1 ~ N according to conf file.
+            </remarks>
+            <since_tizen> 10 </since_tizen>
+            <param name="type">The feedback type.</param>
+            <returns>The counf of theme can be used according to feedback type.</returns>
+            <exception cref="T:System.Exception">Thrown when failed because the feedback is not initialized.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when failed because of an invalid arguament.</exception>
+            <exception cref="T:System.NotSupportedException">Thrown when failed becuase the device (haptic, sound) is not supported.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when failed because of a system error.</exception>
+            <example>
+            <code>
+            Feedback feedback = new Feedback();
+            uint coundOfTheme = feedback.GetCountOfThemeInternal(FeedbackType.Sound);
+            </code>
+            </example>
+            <seealso cref="T:Tizen.System.FeedbackType"/>
+        </member>
+        <member name="M:Tizen.System.Feedback.GetThemeIdInternal(Tizen.System.FeedbackType)">
+            <summary>
+            Gets the current id of the theme selected from available themes described in the conf file.
+            </summary>
+            <remarks>
+            Now this internal API works for FeedbackType.Sound only, FeedbackType.Vibration is not supported.
+            The theme id is positive value as defined in the conf file.
+            </remarks>
+            <since_tizen> 10 </since_tizen>
+            <param name="type">The feedback type.</param>
+            <returns>The id of theme selected as default theme according to feedback type.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when failed because of an invalid arguament.</exception>
+            <exception cref="T:System.NotSupportedException">Thrown when failed becuase the device (haptic, sound) is not supported.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when failed because of a system error.</exception>
+            <example>
+            <code>
+            Feedback feedback = new Feedback();
+            uint idOfTheme = feedback.GetThemeIdInternal(FeedbackType.Sound);
+            </code>
+            </example>
+            <seealso cref="T:Tizen.System.FeedbackType"/>
+        </member>
+        <member name="M:Tizen.System.Feedback.SetThemeIdInternal(Tizen.System.FeedbackType,System.UInt32)">
+            <summary>
+            Sets the current id of the theme from available themes described in the conf file.
+            </summary>
+            <remarks>
+            Now this internal API works for FeedbackType.Sound only, FeedbackType.Vibration is not supported.
+            To set the id of theme for Sound type, the application should have http://tizen.org/privilege/systemsettings.admin privilege.
+            The theme id is positive value as defined in the conf file.
+            </remarks>
+            <since_tizen> 10 </since_tizen>
+            <param name="type">The feedback type.</param>
+            <param name="idOfTheme">The id of theme will be set.</param>
+            <exception cref="T:System.ArgumentException">Thrown when failed because of an invalid arguament.</exception>
+            <exception cref="T:System.NotSupportedException">Thrown when failed becuase the device (haptic, sound) is not supported.</exception>
+            <exception cref="T:System.UnauthorizedAccessException">Thrown when failed because the access is not granted(No privilege)</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when failed because of a system error.</exception>
+            <example>
+            <code>
+            Feedback feedback = new Feedback();
+            uint idOfTheme = 1;
+            feedback.SetThemeIdInternal(FeedbackType.Sound, idOfTheme);
+            </code>
+            </example>
+            <seealso cref="T:Tizen.System.FeedbackType"/>
+        </member>
+        <member name="M:Tizen.System.Feedback.StopTypeInternal(Tizen.System.FeedbackType)">
+            <summary>
+            Stops reactions of various types according to the feedback type.
+            </summary>
+            <remarks>
+            To stop vibration, the application should have http://tizen.org/privilege/haptic privilege.
+            </remarks>
+            <since_tizen> 10 </since_tizen>
+            <param name="type">The feedback type.</param>
+            <exception cref="T:System.Exception">Thrown when failed because the feedback is not initialized.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when failed because of an invalid argument</exception>
+            <exception cref="T:System.NotSupportedException">Thrown when failed because the device (haptic, sound) or a specific pattern is not supported.</exception>
+            <exception cref="T:System.UnauthorizedAccessException">Thrown when failed because the access is not granted (No privilege).</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when failed because of a system error.</exception>
+            <example>
+            <code>
+            Feedback Feedback = new Feedback();
+            feedback.StopTypeInternal(FeedbackType.Sound);
+            feedback.StopTypeInternal(FeedbackType.Vibration);
+            </code>
+            </example>
+            <seealso cref="T:Tizen.System.FeedbackType"/>
+        </member>
+        <member name="M:Tizen.System.Feedback.GetThemeIdsInternal(Tizen.System.FeedbackType)">
+            <summary>
+            Gets the array of theme ids supported described in the conf file.
+            </summary>
+            <remarks>
+            Now this internal API works for FeedbackType.Sound only, FeedbackType.Vibration is not supported.
+            The theme id is positive value as defined in the conf file.
+            Gets all theme ids as defined in the conf file.
+            </remarks>
+            <since_tizen> 10 </since_tizen>
+            <param name="type">The feedback type.</param>
+            <returns>The array of theme id supported according to feedback type.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when failed because of an invalid arguament.</exception>
+            <exception cref="T:System.NotSupportedException">Thrown when failed becuase the device (haptic, sound) is not supported.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when failed because of a system error.</exception>
+            <example>
+            <code>
+            Feedback feedback = new Feedback();
+            uint[] getThemeIds = feedback.GetThemeIdsInternal(FeedbackType.Sound);
+            </code>
+            </example>
+            <seealso cref="T:Tizen.System.FeedbackType"/>
+        </member>
+        <member name="T:Tizen.System.FeedbackPattern">
+            <summary>
+            String and enumeration for feedback patterns.
+            </summary>
+        </member>
+        <member name="T:Tizen.System.FeedbackType">
+            <summary>
+            Enumeration for feedback device types.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.System.FeedbackType.All">
+            <summary>
+            Sound and vibration.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.System.FeedbackType.Sound">
+            <summary>
+            Sound feedback.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.System.FeedbackType.Vibration">
+            <summary>
+            Vibration feedback.
+            /// </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+    </members>
+</doc>

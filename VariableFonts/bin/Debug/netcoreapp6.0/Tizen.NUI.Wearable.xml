@@ -1,0 +1,1615 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tizen.NUI.Wearable</name>
+    </assembly>
+    <members>
+        <member name="T:Tizen.NUI.Wearable.FishEyeLayoutManager">
+            <summary>
+            [Draft] This class implements a fish eye layout
+            </summary>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.CircularPagination">
+            <summary>
+            CircularPagination shows the number of pages available and the currently active page.
+            Especially, CircularPagination provides indicators specific to wearable device.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularPagination.#ctor">
+            <summary>
+            Creates a new instance of a CircularPagination.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularPagination.#ctor(Tizen.NUI.Wearable.CircularPaginationStyle)">
+            <summary>
+            Creates a new instance of a CircularPagination using style.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularPagination.IndicatorSize">
+            <summary>
+            Gets or sets the size of the indicator.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularPagination.IndicatorImageURL">
+            <summary>
+            Gets or sets the background resource of indicator.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularPagination.CenterIndicatorImageURL">
+            <summary>
+            Gets or sets the background resource of the center indicator.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularPagination.IsSymmetrical">
+             <summary>
+             Checks whether the indicators are symmetrical or not.
+            
+             The default value is true.
+             If the value is true, the user just can set IndicatorCount.
+             If false, the user should set both the number of Left Indicators and the number of Right Indicators.
+             Please refer to LeftIndicatorCount and RightIndicatorCount.
+             </summary>
+             <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularPagination.IndicatorCount">
+             <summary>
+             Gets or sets the number of the pages/indicators.
+            
+             This value is for symmetrical indicators.
+             </summary>
+             <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularPagination.LeftIndicatorCount">
+             <summary>
+             Gets or sets the number of the left pages/indicators.
+            
+             This value can be set when IsSymmetrical API is false.
+             </summary>
+             <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularPagination.RightIndicatorCount">
+             <summary>
+             Gets or sets the number of the right pages/indicators.
+            
+             This value can be set when IsSymmetrical API is false.
+             </summary>
+             <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularPagination.SelectedIndex">
+             <summary>
+             Gets or sets the index of the select indicator.
+            
+             If no value is set, the default value is the center indicator.
+             </summary>
+             <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularPagination.GetIndicatorPosition(System.Int32)">
+            <summary>
+            Retrieves the position of a indicator by index.
+            </summary>
+            <param name="index">Indicator index</param>
+            <returns>The position of a indicator by index</returns>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularPagination.SetIndicatorPosition(System.Int32,Tizen.NUI.Position)">
+            <summary>
+            Sets the position of a indicator by index.
+            </summary>
+            <param name="index">Indicator index</param>
+            <param name="position">The position of a indicator by index</param>
+            <exception cref="T:System.ArgumentNullException">This exception can occur by the position is null.</exception>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularPagination.SelectOut(Tizen.NUI.VisualMap)">
+            <summary>
+            You can override it to do your select out operation.
+            </summary>
+            <param name="selectOutIndicator">The indicator will be selected out</param>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularPagination.SelectIn(Tizen.NUI.VisualMap)">
+            <summary>
+            You can override it to do your select in operation.
+            </summary>
+            <param name="selectInIndicator">The indicator will be selected in</param>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularPagination.CreateViewStyle">
+            <summary>
+            you can override it to create your own default style.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularPagination.Dispose(Tizen.NUI.DisposeTypes)">
+            <summary>
+            you can override it to clean-up your own resources.
+            </summary>
+            <param name="type">DisposeTypes</param>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.CircularProgress">
+            <summary>
+            The CircularProgress class of Wearable is used to show the ongoing status with a circular bar.
+            CircularProgress can be counted in its percentage.
+            </summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularProgress.ThicknessProperty">
+            <summary>Bindable property of Thickness</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularProgress.MaxValueProperty">
+            <summary>Bindable property of MaxValue</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularProgress.MinValueProperty">
+            <summary>Bindable property of MinValue</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularProgress.CurrentValueProperty">
+            <summary>Bindable property of CurrentValue</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularProgress.TrackColorProperty">
+            <summary>Bindable property of TrackColor</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularProgress.ProgressColorProperty">
+            <summary>Bindable property of ProgressColor</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularProgress.IsEnabledProperty">
+            <summary>Bindable property of IsEnabled</summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularProgress.#ctor">
+            <summary>
+            The constructor of CircularProgress.
+            Basically, CircularProgress is for full screen. (360 x 360)
+            But, it also can be displayed on the button or the list for small size.
+            User can set its size.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularProgress.#ctor(System.String)">
+            <summary>
+            The constructor of the CircularProgress class with specific style.
+            </summary>
+            <param name="style">style name</param>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularProgress.#ctor(Tizen.NUI.Wearable.CircularProgressStyle)">
+            <summary>
+            The constructor of the CircularProgress class with specific style.
+            </summary>
+            <param name="progressStyle">The style object to initialize the CircularProgress.</param>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularProgress.Thickness">
+            <summary>
+            The thickness of the track and progress.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularProgress.MaxValue">
+            <summary>
+            The property to get/set the maximum value of the CircularProgress.
+            The default value is 100.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularProgress.MinValue">
+            <summary>
+            The property to get/set the minimum value of the CircularProgress.
+            The default value is 0.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularProgress.CurrentValue">
+            <summary>
+            The property to get/set the current value of the CircularProgress.
+            The default value is 0.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularProgress.TrackColor">
+            <summary>
+            The property to get/set Track object color of the CircularProgress.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularProgress.ProgressColor">
+            <summary>
+            The property to get/set Progress object color of the CircularProgress.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularProgress.IsEnabled">
+            <summary>
+            Flag to be enabled or disabled in CircularProgress.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularProgress.Dispose(Tizen.NUI.DisposeTypes)">
+            <summary>
+            Dispose Progress and all children on it.
+            </summary>
+            <param name="type">Dispose type.</param>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularProgress.UpdateValue">
+            <summary>
+            Update progress value
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularProgress.CreateViewStyle">
+            <summary>
+            Get Progress style.
+            </summary>
+            <returns>The default progress style.</returns>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularProgress.OnControlStateChanged(Tizen.NUI.BaseComponents.View.ControlStateChangedEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.CircularScrollbar">
+            <summary>
+            The CircualrScrollbar is a wearable NUI component that can be linked to the scrollable objects
+            indicating the current scroll position of the scrollable object.<br />
+            </summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularScrollbar.ThicknessProperty">
+            <summary>Bindable property of Thickness</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularScrollbar.TrackSweepAngleProperty">
+            <summary>Bindable property of TrackSweepAngle</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularScrollbar.TrackColorProperty">
+            <summary>Bindable property of TrackColor</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularScrollbar.ThumbColorProperty">
+            <summary>Bindable property of ThumbColor</summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularScrollbar.#ctor">
+            <summary>
+            Create an empty CircularScrollbar.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularScrollbar.#ctor(System.Single,System.Single,System.Single,System.Boolean)">
+            <summary>
+            Create a CircularScrollbar and initialize with properties.
+            </summary>
+            <param name="contentLength">The length of the scrollable content area.</param>
+            <param name="viewportLength">The length of the viewport representing the amount of visible content.</param>
+            <param name="currentPosition">The current position of the viewport in scrollable content area. This is the viewport's top position if the scroller is vertical, otherwise, left.</param>
+            <param name="isHorizontal">Whether the direction of scrolling is horizontal or not. It is vertical by default.</param>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularScrollbar.#ctor(Tizen.NUI.Wearable.CircularScrollbarStyle)">
+            <summary>
+            Create an empty CircularScrollbar with a CircularScrollbarStyle instance to set style properties.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularScrollbar.#cctor">
+            <summary>
+            Static constructor to initialize bindable properties when loading.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularScrollbar.Thickness">
+            <summary>
+            The thickness of the scrollbar and track.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularScrollbar.TrackSweepAngle">
+            <summary>
+            The sweep angle of track area in degrees.
+            </summary>
+            <remarks>
+            Values below 6 degrees are treated as 6 degrees.
+            Values exceeding 180 degrees are treated as 180 degrees.
+            </remarks>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularScrollbar.TrackColor">
+            <summary>
+            The color of the track part.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularScrollbar.ThumbColor">
+            <summary>
+            The color of the thumb part.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularScrollbar.Initialize(System.Single,System.Single,System.Single,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularScrollbar.Update(System.Single,System.Single,System.Single,System.UInt32,Tizen.NUI.AlphaFunction)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularScrollbar.Update(System.Single,System.Single,System.UInt32,Tizen.NUI.AlphaFunction)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularScrollbar.ScrollTo(System.Single,System.UInt32,Tizen.NUI.AlphaFunction)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularScrollbar.OnRelayout(Tizen.NUI.Vector2,Tizen.NUI.RelayoutContainer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularScrollbar.ApplyStyle(Tizen.NUI.BaseComponents.ViewStyle)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularScrollbar.CreateViewStyle">
+            <inheritdoc/>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularScrollbar.ScrollPosition">
+            <inheritdoc/>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularScrollbar.ScrollCurrentPosition">
+            <inheritdoc/>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.CircularSliderValueChangedEventArgs">
+            <summary>
+            Value Changed event data.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSliderValueChangedEventArgs.CurrentValue">
+            <summary>
+            Current value
+            </summary>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.CircularSlider">
+            <summary>
+            The CircularSlider class of Wearable is used to let users select a value from a continuous or discrete range of values by moving the slider thumb.
+            CircularSlider shows the current value with the length of the line.
+            </summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSlider.ThicknessProperty">
+            <summary>Bindable property of Thickness</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSlider.MaxValueProperty">
+            <summary>Bindable property of MaxValue</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSlider.MinValueProperty">
+            <summary>Bindable property of MinValue</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSlider.CurrentValueProperty">
+            <summary>Bindable property of CurrentValue</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSlider.TrackColorProperty">
+            <summary>Bindable property of TrackColor</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSlider.ProgressColorProperty">
+            <summary>Bindable property of ProgressColor</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSlider.ThumbSizeProperty">
+            <summary>Bindable property of ThumbSize</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSlider.ThumbColorProperty">
+            <summary>Bindable property of ThumbColor</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSlider.IsEnabledProperty">
+            <summary>Bindable property of IsEnabled</summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularSlider.#ctor">
+            <summary>
+            The constructor of CircularSlider.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularSlider.#ctor(Tizen.NUI.Wearable.CircularSliderStyle)">
+            <summary>
+            The constructor of the CircularSlider class with specific style.
+            </summary>
+            <param name="progressStyle">The style object to initialize the CircularSlider.</param>
+        </member>
+        <member name="E:Tizen.NUI.Wearable.CircularSlider.ValueChanged">
+            <summary>
+            The value changed event handler.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSlider.Thickness">
+            <summary>
+            The thickness of the track and progress.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSlider.MaxValue">
+            <summary>
+            The property to get/set the maximum value of the CircularSlider.
+            The default value is 100.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSlider.MinValue">
+            <summary>
+            The property to get/set the minimum value of the CircularSlider.
+            The default value is 0.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSlider.CurrentValue">
+            <summary>
+            The property to get/set the current value of the CircularSlider.
+            The default value is 0.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSlider.TrackColor">
+            <summary>
+            The property to get/set Track object color of the CircularSlider.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSlider.ProgressColor">
+            <summary>
+            The property to get/set Progress object color of the CircularSlider.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSlider.ThumbSize">
+            <summary>
+            Gets or sets the size of the thumb of Slider.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSlider.ThumbColor">
+            <summary>
+            The property to get/set Thumb object color of the CircularSlider.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSlider.IsEnabled">
+            <summary>
+            Flag to be enabled or disabled in CircularSlider.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularSlider.Dispose(Tizen.NUI.DisposeTypes)">
+            <summary>
+            Dispose Progress and all children on it.
+            </summary>
+            <param name="type">Dispose type.</param>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularSlider.UpdateValue">
+            <summary>
+            Update progress value
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularSlider.CreateViewStyle">
+            <summary>
+            Get Progress style.
+            </summary>
+            <returns>The default progress style.</returns>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.Popup">
+            <summary>
+            Popup is an UI component to give a notification or message, which interaction with user simply.
+            It is attached to Window directly so that it is shown on top of all UI components.
+            Title(text) and Content(container) are initially formed and user can control them by setting properties or styles.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.Popup.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.Popup.#ctor(Tizen.NUI.Wearable.PopupStyle)">
+            <summary>
+            Constructor with style
+            </summary>
+            <param name="style">style</param>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.Popup.Dispose(Tizen.NUI.DisposeTypes)">
+            <summary>
+            Dispose.
+            </summary>
+            <param name="type">Dispose type</param>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.Popup.ButtonPosition">
+            <summary>
+            Set postion of added button
+            </summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.Popup.ButtonPosition.Left">
+            <summary>
+            Left side on popup
+            </summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.Popup.ButtonPosition.Right">
+            <summary>
+            Right side on popup
+            </summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.Popup.ButtonPosition.Bottom">
+            <summary>
+            Lower sider on popup
+            </summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.Popup.ButtonPosition.Custom">
+            <summary>
+            User set the position on popup
+            </summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.Popup.ButtonPosition.Automatic">
+            <summary>
+            Position is set automatically
+            </summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.Popup.ContentContainer">
+            <summary>
+            ContentContainer
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.Popup.AppendButton(System.String,Tizen.NUI.Components.Button,System.Boolean,Tizen.NUI.Wearable.Popup.ButtonPosition)">
+            <summary>
+            Append Buttons on popup.
+            </summary>
+            <param name="index">Key to get a specific button by using GetButton</param>
+            <param name="button">Button to be added</param>
+            <param name="automaticPositioning">If set true, added button will be placed automatically</param>
+            <param name="position">Specific postion set by user</param>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.Popup.GetButton(System.String)">
+            <summary>
+            Get Button by index.
+            </summary>
+            <param name="index">Index(key) to be found</param>
+            <returns>Button of Popup</returns>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.Popup.GetTitle">
+            <summary>
+            Get Title.
+            </summary>
+            <returns>Title(TextLabel) of Popup</returns>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.Popup.AppendContent(System.String,Tizen.NUI.BaseComponents.View)">
+            <summary>
+            Append indexed content which is created by user.
+            </summary>
+            <param name="index">Index(key) of the content added</param>
+            <param name="content">Content to be added in Popup's content</param>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.Popup.GetContent(System.String)">
+            <summary>
+            Get indexed content.
+            </summary>
+            <param name="index">Index(key) to be found</param>
+            <returns>Content in the Popup</returns>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.Popup.Post(Tizen.NUI.Window,System.Boolean)">
+            <summary>
+            Post on top of Window.
+            </summary>
+            <param name="targetWindow">Window where Popup is placed</param>
+            <param name="animated">Posting animation</param>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.Popup.Dismiss(System.Boolean)">
+            <summary>
+            Dismiss Popup.
+            </summary>
+            <param name="animated">True when using Dismissing event</param>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.Popup.SetTimeout(System.UInt32)">
+            <summary>
+            Set timeout milli-second
+            </summary>
+            <param name="milliSecond">Automatically dissmissed after milli-second</param>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.Popup.OnUpdate">
+            <summary>
+            OnUpdate
+            </summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.Popup.CustomAnimation">
+            <summary>
+            CustomAnimation
+            </summary>
+        </member>
+        <member name="E:Tizen.NUI.Wearable.Popup.OutsideClicked">
+            <summary>
+            Event when outside of components(Button, Content, Title) is clicked.
+            </summary>
+        </member>
+        <member name="E:Tizen.NUI.Wearable.Popup.BeforePosting">
+            <summary>
+            Event before popup is posted. Customized action such as animation can be added.
+            </summary>
+        </member>
+        <member name="E:Tizen.NUI.Wearable.Popup.AfterPosting">
+            <summary>
+            Event after popup is posted. Customized action such as animation can be added.
+            </summary>
+        </member>
+        <member name="E:Tizen.NUI.Wearable.Popup.BeforeDissmising">
+            <summary>
+            Event before popup is dismissed. Customized action such as animation can be added.
+            </summary>
+        </member>
+        <member name="E:Tizen.NUI.Wearable.Popup.AfterDissmising">
+            <summary>
+            Event after popup is dismissed. Customized action such as animation can be added.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.Popup.CreateViewStyle">
+            <summary>
+            Get Popup style.
+            </summary>
+            <returns>The default popup style.</returns>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.IPopupAnimation">
+            <summary>
+            PopupAnimation interface
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.IPopupAnimation.ShowAnimation(Tizen.NUI.Wearable.Popup)">
+            <summary>
+            ShowAnimation
+            </summary>
+            <param name="popup"></param>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.IPopupAnimation.HideAnimation(Tizen.NUI.Wearable.Popup)">
+            <summary>
+            HideAnimation
+            </summary>
+            <param name="popup"></param>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.GridRecycleLayoutManager">
+            <summary>
+            [Draft] This class implements a grid box layout.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.GridRecycleLayoutManager.Rows">
+            <summary>
+            [draft ]Get/Set the number of rows in the grid
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.GridRecycleLayoutManager.Columns">
+            <summary>
+            [Draft] Get/Set the number of columns in the grid
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.GridRecycleLayoutManager.CalculateLayoutOrientationSize">
+            <summary>
+            This is called to find out how much container size can be.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.GridRecycleLayoutManager.Layout(System.Single)">
+            <summary>
+            This is called to find out where items are lain out according to current scroll position.
+            </summary>
+            <param name="scrollPosition">Scroll position which is calculated by ScrollableBase</param>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.GridRecycleLayoutManager.Recycle(System.Single)">
+            <summary>
+            This is called to find out which items should be recycled according to current scroll position.
+            </summary>
+            <param name="scrollPosition">Scroll position which is calculated by ScrollableBase</param>
+            <returns>List of RecycleItems which should be recycled.</returns>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.GridRecycleLayoutManager.CalculateCandidateScrollPosition(System.Single)">
+            <summary>
+            Adjust scrolling position by own scrolling rules.
+            </summary>
+            <param name="scrollPosition">Scroll position which is calculated by ScrollableBase</param>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.GridRecycleLayoutManager.RequestNextFocusableView(Tizen.NUI.BaseComponents.View,Tizen.NUI.BaseComponents.View.FocusDirection,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.LinearRecycleLayoutManager">
+            <summary>
+            [Draft] This class implements a linear box layout.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.LinearRecycleLayoutManager.Layout(System.Single)">
+            <summary>
+            This is called to find out where items are lain out according to current scroll position.
+            </summary>
+            <param name="scrollPosition">Scroll position which is calculated by ScrollableBase</param>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.LinearRecycleLayoutManager.CalculateLayoutOrientationSize">
+            <summary>
+            This is called to find out how much container size can be.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.LinearRecycleLayoutManager.Recycle(System.Single)">
+            <summary>
+            This is called to find out which items should be recycled according to current scroll position.
+            </summary>
+            <param name="scrollPosition">Scroll position which is calculated by ScrollableBase</param>
+            <returns>List of RecycleItems which should be recycled.</returns>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.LinearRecycleLayoutManager.CalculateCandidateScrollPosition(System.Single)">
+            <summary>
+            Adjust scrolling position by own scrolling rules.
+            </summary>
+            <param name="scrollPosition">Scroll position which is calculated by ScrollableBase</param>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.LinearRecycleLayoutManager.RequestNextFocusableView(Tizen.NUI.BaseComponents.View,Tizen.NUI.BaseComponents.View.FocusDirection,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.RecycleAdapter">
+            <summary>
+            [Draft] Defalt adapter for RecyclerView.
+            Managing RecycleItem and Data for RecyclerView.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.RecycleAdapter.CreateRecycleItem">
+            <summary>
+            Create recycle item for RecyclerView.
+            RecyclerView will make its children using this api.
+            </summary>
+            <returns>Item for RecyclerView</returns>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.RecycleAdapter.BindData(Tizen.NUI.Wearable.RecycleItem)">
+            <summary>
+            Bind data with recycler item.
+            This function is called when RecyclerItem is used again with new data.
+            Can update content of recycle item with new data at DataIndex of item. 
+            </summary>
+            <param name="item">Reused RecycleItem which needs data binding.</param>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.RecycleAdapter.Notify">
+            <summary>
+            Notify when data of adapter is changed.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="E:Tizen.NUI.Wearable.RecycleAdapter.OnDataChanged">
+            <summary>
+            Triggered when user called Notify().
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.RecycleAdapter.Data">
+            <summary>
+            Triggered when user called Notify().
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.RecycleItem">
+            <summary>
+            [Draft] This class provides a basic item for RecyclerView.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.RecycleItem.DataIndex">
+            <summary>
+            Data index which is binded to item by RecycleAdapter.
+            Can access to data of RecycleAdapter using this index.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.RecycleLayoutManager">
+            <summary>
+            [Draft] Defalt layout manager for RecyclerView.
+            Lay out RecycleItem and recycle RecycleItem.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.RecycleLayoutManager.Orientation">
+            <summary>
+            Enumeration for the direction in which the content is laid out
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.RecycleLayoutManager.Orientation.Vertical">
+            <summary>
+            Vertical
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.RecycleLayoutManager.Orientation.Horizontal">
+            <summary>
+            Horizontal
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.RecycleLayoutManager.Container">
+            <summary>
+            Container which contains RecycleItems.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.RecycleLayoutManager.ItemSize">
+            <summary>
+            Size of RecycleItem.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.RecycleLayoutManager.LayoutOrientation">
+            <summary>
+            Get/Set the orientation in the layout.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.RecycleLayoutManager.StepSize">
+            <summary>
+            How far can you reach the next item.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.RecycleLayoutManager.DataCount">
+            <summary>
+            How far can you reach the next item.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.RecycleLayoutManager.PrevScrollPosition">
+            <summary>
+            The last scrolled position which is calculated by ScrollableBase. The value should be updated in the Recycle() method.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.RecycleLayoutManager.Layout(System.Single)">
+            <summary>
+            This is called to find out where items are lain out according to current scroll position.
+            </summary>
+            <param name="scrollPosition">Scroll position which is calculated by ScrollableBase</param>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.RecycleLayoutManager.CalculateLayoutOrientationSize">
+            <summary>
+            This is called to find out how much container size can be.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.RecycleLayoutManager.Recycle(System.Single)">
+            <summary>
+            This is called to find out which items should be recycled according to current scroll position.
+            </summary>
+            <param name="scrollPosition">Scroll position which is calculated by ScrollableBase</param>
+            <returns>List of RecycleItems which should be recycled.</returns>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.RecycleLayoutManager.CalculateCandidateScrollPosition(System.Single)">
+            <summary>
+            Adjust scrolling position by own scrolling rules.
+            </summary>
+            <param name="scrollPosition">Scroll position which is calculated by ScrollableBase</param>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.RecycleLayoutManager.RequestNextFocusableView(Tizen.NUI.BaseComponents.View,Tizen.NUI.BaseComponents.View.FocusDirection,System.Boolean)">
+            <summary>
+            Gets the next keyboard focusable view in this control towards the given direction.<br />
+            A control needs to override this function in order to support two dimensional keyboard navigation.<br />
+            </summary>
+            <param name="currentFocusedView">The current focused view.</param>
+            <param name="direction">The direction to move the focus towards.</param>
+            <param name="loopEnabled">Whether the focus movement should be looped within the control.</param>
+            <returns>The next keyboard focusable view in this control or an empty handle if no view can be focused.</returns>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.RecyclerView">
+            <summary>
+            [Draft] This class provides a View that can recycle items to improve performance.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.RecyclerView.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.RecyclerView.#ctor(Tizen.NUI.Wearable.RecycleAdapter,Tizen.NUI.Wearable.RecycleLayoutManager)">
+            <summary>
+            A constructor of <see cref="T:Tizen.NUI.Wearable.RecyclerView" />.
+            </summary>
+            <param name="adapter">Recycle adapter of RecyclerView.</param>
+            <param name="layoutManager">Recycle layoutManager of RecyclerView.</param>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.RecyclerView.TotalItemCount">
+            <summary>
+            Gets / Sets total number of items.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.RecyclerView.ScrollingDirection">
+            <summary>
+            Scrolling direction mode for RecyclerView. <see cref="P:Tizen.NUI.Components.ScrollableBase.ScrollingDirection"/>.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.RecyclerView.Adapter">
+            <summary>
+            Recycler adpater.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.RecyclerView.LayoutManager">
+            <summary>
+            Recycler layoutManager.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.RecyclerView.AdjustTargetPositionOfScrollAnimation(System.Single)">
+            <summary>
+            Adjust scrolling position by own scrolling rules.
+            Override this function when developer wants to change destination of flicking.(e.g. always snap to center of item)
+            </summary>
+            <param name="position">Scroll position which is calculated by ScrollableBase</param>
+            <returns>Adjusted scroll destination</returns>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.RecyclerView.GetNextFocusableView(Tizen.NUI.BaseComponents.View,Tizen.NUI.BaseComponents.View.FocusDirection,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.WatchView">
+            <summary>
+            The WatchView is a class for displaying the watch.<br />
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.WatchView.#ctor(Tizen.NUI.Window,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Creates a new WatchView.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.WatchView.PauseWatch">
+            <summary>
+            Pauses a given Watch.
+            </summary>
+            <returns>True on success, false otherwise.</returns>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.WatchView.ResumeWatch">
+            <summary>
+            Resumes a given Watch.
+            </summary>
+            <returns>True on success, false otherwise.</returns>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.WatchView.Dispose(Tizen.NUI.DisposeTypes)">
+            <summary>
+            To make the Button instance be disposed.
+            </summary>
+            <since_tizen> 6 </since_tizen>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.WearableList">
+            <summary>
+            [Draft] This class provides a list view styled by wearable ux.
+            List will lay out all items with Fish-Eye layout manager.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.WearableList.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.WearableList.SetScrollbar">
+            <inheritdoc/>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.WearableList.Adapter">
+            <inheritdoc/>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.WearableList.SetFocus(System.Int32,System.Boolean)">
+            <summary>
+            Set focus to item which has specific data index.
+            </summary>
+            <param name="dataIndex">Data index of item.</param>
+            <param name="animated">If set true, scroll to item using animation.</param>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.WearableList.OnPreReachedTargetPosition(System.Single)">
+            <summary>
+            This helps developer who wants to know before scroll is reaching target position.
+            </summary>
+            <param name="targetPosition">Index of item.</param>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.CircularPaginationStyle">
+            <summary>
+            CircularPaginationStyle used to config the circularPagination represent.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularPaginationStyle.IndicatorSizeProperty">
+            <summary>The IndicatorSize bindable property.</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularPaginationStyle.IndicatorImageUrlSelectorProperty">
+            <summary>The IndicatorImageUrlSelector bindable property.</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularPaginationStyle.CenterIndicatorImageUrlSelectorProperty">
+            <summary>The CenterIndicatorImageUrlSelector bindable property.</summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularPaginationStyle.#ctor">
+            <summary>
+            Creates a new instance of a CircularPaginationStyle.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularPaginationStyle.#ctor(Tizen.NUI.Wearable.CircularPaginationStyle)">
+            <summary>
+            Creates a new instance of a CircularPaginationStyle using style.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularPaginationStyle.IndicatorSize">
+            <summary>
+            Gets or sets the size of the indicator.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularPaginationStyle.IndicatorImageURL">
+            <summary>
+            Gets or sets the resource of indicator.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularPaginationStyle.CenterIndicatorImageURL">
+            <summary>
+            Gets or sets the resource of the center indicator.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.CircularProgressStyle">
+            <summary>
+            CircularProgressStyle is a class which saves CircularProgress's ux data.
+            </summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularProgressStyle.ThicknessProperty">
+            <summary>Bindable property of Thickness</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularProgressStyle.MaxValueProperty">
+            <summary>Bindable property of MaxValue</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularProgressStyle.MinValueProperty">
+            <summary>Bindable property of MinValue</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularProgressStyle.CurrentValueProperty">
+            <summary>Bindable property of CurrentValue</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularProgressStyle.TrackColorProperty">
+            <summary>Bindable property of TrackColor</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularProgressStyle.ProgressColorProperty">
+            <summary>Bindable property of ProgressColor</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularProgressStyle.IsEnabledProperty">
+            <summary>Bindable property of IsEnabled</summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularProgressStyle.#ctor">
+            <summary>
+            Creates a new instance of a CircularProgressStyle.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularProgressStyle.#ctor(Tizen.NUI.Wearable.CircularProgressStyle)">
+            <summary>
+            Creates a new instance of a CircularProgressStyle with style.
+            </summary>
+            <param name="style">Create CircularProgressStyle by style customized by user.</param>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularProgressStyle.Thickness">
+            <summary>
+            The thickness of the track and progress.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularProgressStyle.MaxValue">
+            <summary>
+            The property to get/set the maximum value of the CircularProgress.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularProgressStyle.MinValue">
+            <summary>
+            The property to get/set the minim value of the CircularProgress.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularProgressStyle.CurrentValue">
+            <summary>
+            The property to get/set the current value of the CircularProgress.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularProgressStyle.TrackColor">
+            <summary>
+            The property to get/set Track object color of the CircularProgress.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularProgressStyle.ProgressColor">
+            <summary>
+            The property to get/set Progress object color of the CircularProgress.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularProgressStyle.IsEnabled">
+            <summary>
+            Flag to be enabled or disabled in CircularProgress.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularProgressStyle.Dispose(System.Boolean)">
+            <summary>
+            Dispose CircularProgressStyle and all children on it.
+            </summary>
+            <param name="disposing">true in order to free managed objects</param>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.CircularScrollbarStyle">
+            <summary>
+            CircularScrollbarStyle is a class which saves CircularScrollbar's ux data.
+            </summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularScrollbarStyle.ThicknessProperty">
+            <summary>Bindable property of Thickness</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularScrollbarStyle.TrackSweepAngleProperty">
+            <summary>Bindable property of TrackSweepAngle</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularScrollbarStyle.TrackColorProperty">
+            <summary>Bindable property of TrackColor</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularScrollbarStyle.ThumbColorProperty">
+            <summary>Bindable property of ThumbColor</summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularScrollbarStyle.#ctor">
+            <summary>
+            Creates a new instance of a CircularScrollbarStyle.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularScrollbarStyle.#ctor(Tizen.NUI.Wearable.CircularScrollbarStyle)">
+            <summary>
+            Copy constructor.
+            </summary>
+            <param name="style">Create ScrollbarStyle by style customized by user.</param>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularScrollbarStyle.#cctor">
+            <summary>
+            Static constructor to initialize bindable properties when loading.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularScrollbarStyle.Thickness">
+            <summary>
+            The thickness of the scrollbar and track.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularScrollbarStyle.TrackSweepAngle">
+            <summary>
+            The sweep angle of track area in degrees.
+            </summary>
+            <remarks>
+            Values below 6 degrees are treated as 6 degrees.
+            Values exceeding 180 degrees are treated as 180 degrees.
+            </remarks>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularScrollbarStyle.TrackColor">
+            <summary>
+            The color of the track part.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularScrollbarStyle.ThumbColor">
+            <summary>
+            The color of the thumb part.
+            </summary>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.CircularSliderStyle">
+            <summary>
+            CircularSliderStyle is a class which saves CircularSlider's ux data.
+            </summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSliderStyle.ThicknessProperty">
+            <summary>Bindable property of Thickness</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSliderStyle.MaxValueProperty">
+            <summary>Bindable property of MaxValue</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSliderStyle.MinValueProperty">
+            <summary>Bindable property of MinValue</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSliderStyle.CurrentValueProperty">
+            <summary>Bindable property of CurrentValue</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSliderStyle.TrackColorProperty">
+            <summary>Bindable property of TrackColor</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSliderStyle.ProgressColorProperty">
+            <summary>Bindable property of ProgressColor</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSliderStyle.ThumbSizeProperty">
+            <summary>Bindable property of ThumbSize</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSliderStyle.ThumbColorProperty">
+            <summary>Bindable property of ThumbColor</summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.CircularSliderStyle.IsEnabledProperty">
+            <summary>Bindable property of IsEnabled</summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularSliderStyle.#ctor">
+            <summary>
+            Creates a new instance of a CircularSliderStyle.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.CircularSliderStyle.#ctor(Tizen.NUI.Wearable.CircularSliderStyle)">
+            <summary>
+            Creates a new instance of a CircularSliderStyle with style.
+            </summary>
+            <param name="style">Create CircularSliderStyle by style customized by user.</param>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSliderStyle.Thickness">
+            <summary>
+            The thickness of the track and progress.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSliderStyle.MaxValue">
+            <summary>
+            The property to get/set the maximum value of the CircularSlider.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSliderStyle.MinValue">
+            <summary>
+            The property to get/set the minim value of the CircularSlider.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSliderStyle.CurrentValue">
+            <summary>
+            The property to get/set the current value of the CircularSlider.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSliderStyle.TrackColor">
+            <summary>
+            The property to get/set Track object color of the CircularSlider.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSliderStyle.ProgressColor">
+            <summary>
+            The property to get/set Progress object color of the CircularSlider.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSliderStyle.ThumbSize">
+            <summary>
+            Gets or sets the size of the thumb of Slider.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSliderStyle.ThumbColor">
+            <summary>
+            The property to get/set Thumb object color of the CircularSlider.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.CircularSliderStyle.IsEnabled">
+            <summary>
+            Flag to be enabled or disabled in CircularSlider.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="T:Tizen.NUI.Wearable.PopupStyle">
+            <summary>
+            PopupStyle used to config the Popup represent.
+            </summary>
+        </member>
+        <member name="F:Tizen.NUI.Wearable.PopupStyle.WrapContentProperty">
+            <summary>Bindable property of WrapContent</summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.PopupStyle.#ctor">
+            <summary>
+            Creates a new instance of a PopupStyle.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.Wearable.PopupStyle.#ctor(Tizen.NUI.Wearable.PopupStyle)">
+            <summary>
+            Creates a new instance of a PopupStyle using style.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.Wearable.PopupStyle.WrapContent">
+            <summary>
+            WrapContent
+            </summary>
+        </member>
+        <member name="F:Tizen.NUI.NUIWatchCoreBackend._application">
+            <summary>
+            Application instance to connect event.
+            </summary>
+        </member>
+        <member name="F:Tizen.NUI.NUIWatchCoreBackend.Handlers">
+            <summary>
+            Dictionary to contain each type of event callback.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchCoreBackend.#ctor">
+            <summary>
+            The default Constructor.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchCoreBackend.#ctor(System.String)">
+            <summary>
+            The constructor with stylesheet.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchCoreBackend.AddEventHandler(Tizen.Applications.CoreBackend.EventType,System.Action)">
+            <summary>
+            Add NUIApplication event to Application.
+            Put each type of event callback in Dictionary.
+            </summary>
+            <param name="evType">Type of event</param>
+            <param name="handler">Event callback</param>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchCoreBackend.AddEventHandler``1(Tizen.Applications.CoreBackend.EventType,System.Action{``0})">
+            <summary>
+            Add NUIApplication event to Application.
+            Put each type of event callback in Dictionary.
+            </summary>
+            <typeparam name="TEventArgs">Argument type for the event</typeparam>
+            <param name="evType">Type of event</param>
+            <param name="handler">Event callback</param>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchCoreBackend.Dispose">
+            <summary>
+            Dispose function.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchCoreBackend.Exit">
+            <summary>
+            Exit Application.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchCoreBackend.Run(System.String[])">
+            <summary>
+            Run Application.
+            </summary>
+            <param name="args">Arguments from commandline.</param>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchCoreBackend.OnRegionChanged(System.Object,Tizen.NUI.NUIApplicationRegionChangedEventArgs)">
+            <summary>
+            Region changed event callback function.
+            </summary>
+            <param name="source">Application instance</param>
+            <param name="e">Event argument for RegionChanged</param>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchCoreBackend.OnMemoryLow(System.Object,Tizen.NUI.NUIApplicationMemoryLowEventArgs)">
+            <summary>
+            Memory Low event callback function.
+            </summary>
+            <param name="source">Application instance</param>
+            <param name="e">Event argument for MemoryLow</param>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchCoreBackend.OnLanguageChanged(System.Object,Tizen.NUI.NUIApplicationLanguageChangedEventArgs)">
+            <summary>
+            Language changed event callback function.
+            </summary>
+            <param name="source">Application instance</param>
+            <param name="e">Event argument for LanguageChanged</param>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchCoreBackend.OnBatteryLow(System.Object,Tizen.NUI.NUIApplicationBatteryLowEventArgs)">
+            <summary>
+            Battery low event callback function.
+            </summary>
+            <param name="source">Application instance</param>
+            <param name="e">Event argument for BatteryLow</param>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchCoreBackend.OnInitialized(System.Object,Tizen.NUI.NUIApplicationInitEventArgs)">
+            <summary>
+            Initialized event callback function.
+            </summary>
+            <param name="source">Application instance</param>
+            <param name="e">Event argument for Initialized</param>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchCoreBackend.OnTerminated(System.Object,Tizen.NUI.NUIApplicationTerminatingEventArgs)">
+            <summary>
+            Terminated event callback function.
+            </summary>
+            <param name="source">Application instance</param>
+            <param name="e">Event argument for Terminated</param>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchCoreBackend.OnResumed(System.Object,Tizen.NUI.NUIApplicationResumedEventArgs)">
+            <summary>
+            Resumed event callback function.
+            </summary>
+            <param name="source">Application instance</param>
+            <param name="e">Event argument for Resumed</param>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchCoreBackend.OnAppControl(System.Object,Tizen.NUI.NUIApplicationAppControlEventArgs)">
+            <summary>
+            App control event callback function.
+            </summary>
+            <param name="source">Application instance</param>
+            <param name="e">Event argument for AppControl</param>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchCoreBackend.OnPaused(System.Object,Tizen.NUI.NUIApplicationPausedEventArgs)">
+            <summary>
+            Paused event callback function.
+            </summary>
+            <param name="source">Application instance</param>
+            <param name="e">Event argument for Paused</param>
+        </member>
+        <member name="T:Tizen.NUI.NUIWatchApplication">
+            <summary>
+            Represents an application that can make watch-face.
+            </summary>
+        </member>
+        <member name="E:Tizen.NUI.NUIWatchApplication.Resumed">
+            <summary>
+            Occurs whenever the application is resumed.
+            </summary>
+        </member>
+        <member name="E:Tizen.NUI.NUIWatchApplication.Paused">
+            <summary>
+            Occurs whenever the application is paused.
+            </summary>
+        </member>
+        <member name="E:Tizen.NUI.NUIWatchApplication.TimeTick">
+            <summary>
+            Occurs at every second.
+            </summary>
+        </member>
+        <member name="T:Tizen.NUI.NUIWatchApplication.TimeTickEventArgs">
+            <summary>
+            Event arguments that passed via time tick event signal.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.TimeTickEventArgs.#ctor(Tizen.NUI.WatchTime)">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.NUIWatchApplication.TimeTickEventArgs.WatchTime">
+            <summary>
+            WatchTime.
+            </summary>
+        </member>
+        <member name="E:Tizen.NUI.NUIWatchApplication.AmbientTick">
+            <summary>
+            Occurs at each minute in ambient mode.
+            http://tizen.org/privilege/alarm.set privilege is needed to receive ambient ticks at each minute.
+            </summary>
+        </member>
+        <member name="T:Tizen.NUI.NUIWatchApplication.AmbientTickEventArgs">
+            <summary>
+            Event arguments that passed via ambient tick event signal.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.AmbientTickEventArgs.#ctor(Tizen.NUI.WatchTime)">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.NUIWatchApplication.AmbientTickEventArgs.WatchTime">
+            <summary>
+            WatchTime.
+            </summary>
+        </member>
+        <member name="E:Tizen.NUI.NUIWatchApplication.AmbientChanged">
+            <summary>
+            Occurs when the device enters or exits ambient mode
+            </summary>
+        </member>
+        <member name="T:Tizen.NUI.NUIWatchApplication.AmbientChangedEventArgs">
+            <summary>
+            Event arguments that passed via ambient tick event signal.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.AmbientChangedEventArgs.#ctor(System.Boolean)">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.NUIWatchApplication.AmbientChangedEventArgs.Changed">
+            <summary>
+            Changed.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.#ctor">
+            <summary>
+            The default constructor.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.#ctor(System.String)">
+            <summary>
+            The constructor with stylesheet.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.OnLocaleChanged(Tizen.Applications.LocaleChangedEventArgs)">
+            <summary>
+            Overrides this method if want to handle behavior.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.OnLowBattery(Tizen.Applications.LowBatteryEventArgs)">
+            <summary>
+            Overrides this method if want to handle behavior.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.OnLowMemory(Tizen.Applications.LowMemoryEventArgs)">
+            <summary>
+            Overrides this method if want to handle behavior.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.OnRegionFormatChanged(Tizen.Applications.RegionFormatChangedEventArgs)">
+            <summary>
+            Overrides this method if want to handle behavior.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.OnCreate">
+            <summary>
+            Overrides this method if want to handle behavior.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.OnPreCreate">
+            <summary>
+            Overrides this method if want to handle behavior.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.OnTerminate">
+            <summary>
+            Overrides this method if want to handle behavior.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.OnAppControlReceived(Tizen.Applications.AppControlReceivedEventArgs)">
+            <summary>
+            Overrides this method if want to handle behavior.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.OnPause">
+            <summary>
+            Overrides this method if want to handle behavior.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.OnResume">
+            <summary>
+            Overrides this method if want to handle behavior.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.OnTimeTick(Tizen.NUI.NUIWatchApplication.TimeTickEventArgs)">
+            <summary>
+            Overrides this method if want to handle behavior.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.OnAmbientTick(Tizen.NUI.NUIWatchApplication.AmbientTickEventArgs)">
+            <summary>
+            Overrides this method if want to handle behavior.
+            </summary>
+            <privilege>http://tizen.org/privilege/alarm.set</privilege>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.OnAmbientChanged(Tizen.NUI.NUIWatchApplication.AmbientChangedEventArgs)">
+            <summary>
+            Overrides this method if want to handle behavior.
+            </summary>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.Run(System.String[])">
+            <summary>
+            Run NUIWidgetApplication.
+            </summary>
+            <param name="args">Arguments from commandline.</param>
+        </member>
+        <member name="M:Tizen.NUI.NUIWatchApplication.Exit">
+            <summary>
+            Exit NUIWidgetApplication.
+            </summary>
+        </member>
+        <member name="P:Tizen.NUI.NUIWatchApplication.Window">
+            <summary>
+            Get the window instance.
+            </summary>
+        </member>
+        <member name="T:Tizen.NUI.Components.Title">
+            <summary>
+            Use it to set the title. this has a fadeout effect.
+            You can also set the color of the fadeout.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Components.Title.#cctor">
+            <summary>
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Components.Title.#ctor">
+            <summary>
+            Construct Title with null.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Components.Title.#ctor(Tizen.NUI.BaseComponents.TextLabelStyle)">
+            <summary>
+            The constructor of the Title class with specific Style.
+            </summary>
+            <param name="textLabelStyle">Construct Style</param>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Components.Title.#ctor(System.String)">
+            <summary>
+            Constructor of the Title class with special style.
+            </summary>
+            <param name="style"> style name </param>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Components.Title.FadeOutColor">
+            <summary>
+            Sets the start and end color of the fadeout.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.NUI.Components.Title.FadeOutWidth">
+            <summary>
+            Gets or Sets the width of the fadeout effect.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="M:Tizen.NUI.Components.Title.Dispose(Tizen.NUI.DisposeTypes)">
+            <summary>
+            Dispose Title.
+            </summary>
+            <param name="type">dispose types.</param>
+            <since_tizen> 8 </since_tizen>
+        </member>
+    </members>
+</doc>

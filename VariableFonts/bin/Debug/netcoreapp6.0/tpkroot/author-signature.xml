@@ -1,0 +1,986 @@
+<Signature Id="AuthorSignature" xmlns="http://www.w3.org/2000/09/xmldsig#">
+  <SignedInfo>
+    <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+    <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+    <Reference URI="VariableFonts.deps.json">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>6kx04aTSltSRiwT5hPEMXDfFh18Dnr/qhMcP+HtJudA=</DigestValue>
+    </Reference>
+    <Reference URI="tizen-manifest.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>v3A9nBm+UZXwLn0DW5dPpcq17kyccvf9GVE1cMoZfus=</DigestValue>
+    </Reference>
+    <Reference URI="res%2Fimages%2Frainbow.jpg">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>L1sludX8dZS7/FffEKzEh3gIC3NTTdnJdWrcBSAEmbw=</DigestValue>
+    </Reference>
+    <Reference URI="res%2Ffonts%2FRobotoFlex%5BGRAD%2CXOPQ%2CXTRA%2CYOPQ%2CYTAS%2CYTDE%2CYTFI%2CYTLC%2CYTUC%2Copsz%2Cslnt%2Cwdth%2Cwght%5D.ttf">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>lKfqlczuKMVIhaUH48wKU0zkHsYdQTk13w4HJhp//mM=</DigestValue>
+    </Reference>
+    <Reference URI="res%2Ffonts%2FNotoSans-VariableFont_wdth%2Cwght.ttf">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>aVxSoT4hJZE7T6raSketkpiM+TUp+g9LnpabMoSa7vc=</DigestValue>
+    </Reference>
+    <Reference URI="res%2Ffonts%2F.uuid">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>am/3JK/5SQFTdSyfLfR7aqHYrqUosXUDtldIBcLn6ug=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fzh-Hant%2FMicrosoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>hm4Eb7FKk0gTI88D9knAoQ0P9m7gW4k9N2HC1u7jFUU=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fzh-Hant%2FMicrosoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>HP7XWn9C56Magh2A4NWotMXq+gUApBijQXR9gRmCW6g=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fzh-Hant%2FMicrosoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>ReojNAIda871TU2JKM+EVXexC0TSY13uVT5pBuA11nI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fzh-Hant%2FMicrosoft.TestPlatform.CoreUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>FTYprhVdQoG01DmYBOhDJnv3HhF/Q/RLPiWZ4yk0E40=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fzh-Hant%2FMicrosoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>QRlKlFs5bbq10GBjmqr8pNdddhu4yoiDl+6DrqIv088=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fzh-Hans%2FMicrosoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>ALAlMF6GR9kB1uNIO9RUC47RhSkWshm6VJqFhFedEXs=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fzh-Hans%2FMicrosoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>e4Vs+KmSEjE2vbSB+/KxzBATon+LigNkDm/0HfrTNVY=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fzh-Hans%2FMicrosoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>upQVkfu1o0czZO9jdqHC5n+iiUfwzzkWocRATzcbYpc=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fzh-Hans%2FMicrosoft.TestPlatform.CoreUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>oMeXFz6bIPjRTUKh2LX/J0YZ8cQl+izfF8Iz1xr93bQ=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fzh-Hans%2FMicrosoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>jrqDVz48at1mnT1igwd4ZZWCOaJcscjPNy449mgcgDI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FVariableFonts.runtimeconfig.json">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>PvpXkVD/TKU4jIFSV7Rm9zZpZmzbnOFVu4Xxp07teQ4=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FVariableFonts.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>GEUStFASF0pKqvGd5JAdxMfNr8tTdIJcwcda5Frnqoc=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FVariableFonts.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>yBiJBtyTI6TMjaMqEkTueFuT0O/WCLA6FBb6j6VYIAU=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FVariableFonts">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>M90fGmYw2NjUCA8yBCmuHpfq+YTdyhXgKiWwnMJffi4=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Ftr%2FMicrosoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>WsUJqWi5U/XAFxhUflbzLAi9MZEk1deYPK5LTCL+3gQ=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Ftr%2FMicrosoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>Cm23ScZe/yR7t4WOWg8z/iQ7o0HqJkk+7DgErXLj4bs=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Ftr%2FMicrosoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>Gwu8C/SHTPoqYbr69/9KSW167Wd52rBCLNrj/jVbwrM=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Ftr%2FMicrosoft.TestPlatform.CoreUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>0Q5e2126F3+hlWDaAiwCw+rO2umigvCmicPKvvyPqfc=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Ftr%2FMicrosoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>uBfPFzK+XxQeeMOmTD87ShidInY/U120g8WJlTOZv9o=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>4pgwVNIq/gvXsLyIlNYHQXrXkg5W03xynPodp+EhA+s=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Tracer.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>7rvXLUE1T49sWukw5LpsVgG/87h8hTWuLqPapgPJPrA=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Tracer.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>5ahjFW9IFfcmsZo9UH3/g9yftJShqIMjOR4G7FR30c0=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Tracer.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>d1NYyKm5ld8T2qHWpWvpgz7+wDZYejSBqjySNbjSulU=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.System.SystemSettings.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>qLYI4mEOGZI7lEhVzqW+Z/rXb7cuiosB//Cqd3/23cE=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.System.SystemSettings.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>i3j0LUQokpYvC9yiXeTrKBXMzUfDvVIydQe31c0tzeg=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.System.SystemSettings.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>jnPuym409FafXKOf/ZZXsLOlEJPQgczuAwqzT4QQxw0=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.System.Information.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>IPGoVKjVu4bd3tGUQmfvbzZouuXcZknbBjerNDapmxI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.System.Information.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>gvIJZGyb9sFspaLAGex4jlVYK0naozru7BHU5BsbWdI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.System.Information.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>DcQryVnvU46vtqVYlnNGGEp5gpNCKXqpKPPVxboZ+m0=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.System.Feedback.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>6418Eq6245bwfyCdfBY48BXvMxRJbhsSytY5exmgp5c=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.System.Feedback.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>I+cQQa54jwiUNwJozDFv1edQLfcCmh532A4W4YBiBA0=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.System.Feedback.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>5/CC80HPzDvtkvwqKQT7uaWiQXx7VLNVPVZTeJg3lLs=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>76uBxVzAU/8koLPiNYsxL8jKpZAZIDMXAa6i593HUrM=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.NUI.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>GoxYP3iHIjuzcR9vFOL+4si7GOl5ImAHO+z9Diij5B0=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.NUI.Wearable.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>lO2+/LQq7oWSYMpJUOYKqNn/iFGpU87fyAvm5TWNyAE=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.NUI.Wearable.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>r6cCLy0hSMiprfIyHzClpNJEB85c8qZH3cGYlAcbEfU=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.NUI.Wearable.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>3Ad4nAR/ssOu8z184pdkk89h0Jb/yvluL6XXdNe7XRI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.NUI.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>Yrp7Qojr9osm6gYMyIAOE+hPwng6Lh3bI384udNEDQo=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.NUI.Extension.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>z5RUBgiBEW7uWBrXpLMiuoN9H62AeDTk5NtB2C6Pp3I=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.NUI.Extension.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>ljgpPNhXEXXGNPZNhm0pbJOnPE2G5GqL9Nqocm/KjRs=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.NUI.Extension.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>FobJKwjvu8F7l7ntVUAW8rlJcaRs/22k+nVj41FOw6M=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.NUI.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>IvQ+xeinESTu2alU8LuSxbj/2UwrnCj26MO4ls+yQUs=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.NUI.Components.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>CfZl6mWIwwUiXRMyIIF41igDbFAgRgO50kaAPduGkx4=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.NUI.Components.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>Rn6HvK/29/SEX6fBZM2Cuv7v3xMxYNWAKyeHohWtH24=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.NUI.Components.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>tm0v9vIAu8RRBT++8iz1yn5FXNQujBW4OjGu6AGT9i4=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Multimedia.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>1cX8Tf6WAgNuDT7cBHjyLlSW0b0IUGQWF1dfZ0gdOCQ=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Multimedia.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>1Mg2dCdDEp5ecbrcfvz1oVzJCAfEV+xDyFtm/Fh2BCA=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Multimedia.MediaPlayer.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>74e7tq6bQIn3NAoSb1QfICnU/YvuPcn9dXEH5PcZ2/U=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Multimedia.MediaPlayer.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>ta9kHW2P/l+2mOY4uuhFhKl2MwbxpE/WMwwaouaHpL0=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Multimedia.MediaPlayer.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>Z7uALcZQz4KNHE0sgzirVfVGAZgiRDjLviLCI3jsOlU=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Multimedia.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>7Yy8bw0BL611tAdo/9wmzmeJznk/6FRVqCtU5JbCQFY=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Multimedia.Camera.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>XKZPmt3rG42IEMueA6TYT3XVNVx/resyXgYxQgPhmNY=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Multimedia.Camera.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>68RkDOgBi2z2mUyuLCZoIAo0QQePimJd5wkzH0S3BRI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Multimedia.Camera.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>7G9Z9I3vwiRIF8ismWLNL4stcmN3crE+eke69crJORc=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Log.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>LV7tO6pZIMlL9sRxMOirlLCVng593d4KzJshX7xP9Xo=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Log.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>X1z5O3kbHBUBjba86nHgAF0UxbSUpOvExOkLPSS6TT8=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Log.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>ReKGDeubzXck0nHHRJINS++JeTqCGnc04va/K8HD2Yw=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>QvW91/VxkCEo0UXR8aOA0uwc1jksy0XIPGgVK8ovDeY=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Applications.ThemeManager.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>Co0+UhGnKacenKCHi1zPbbY3RGE9/bseZoVbvs3D3Uo=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Applications.ThemeManager.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>jhJVDxLcfIWBzKb7pnK0xgIYtP//tv0OdV8UrPz7m3Q=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Applications.ThemeManager.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>zYpWUNlMc1Sgv+oW0xAoRcyWlSUhsmSSY3Vdv+HWXME=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Applications.ComponentBased.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>TwAgqxkpDrQ6+U49RsMvG5Q8jqnCyyHYVBjQcEG6SLc=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Applications.ComponentBased.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>CAyfjl7YHtF5P9+1hSLM7ii2dvjIgKxHIWPjvU6vhpE=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Applications.ComponentBased.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>TevrG7sfo1vQhwTerY/ZNnSq+iJeeLXNEHMY9glDFpI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Applications.Common.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>w8mbjbc1BtbcKcIj0FpP+L2Za3sEsdkUsCOtXOM/Ot0=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Applications.Common.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>JohFiPgpWF6ILsvBhMCv5n5D4ybNPo6U3Vwiy4mO6sQ=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FTizen.Applications.Common.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>jR0+8vDZsG49f9NsOf7luhfe6gV2T9HC70u3MFCS4ss=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Ftesthost.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>kTsV03qmLlRNa7a7qBmu082DU8qzU/KP22bVaLGnQ9I=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FSystem.Xml.XPath.XmlDocument.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>2B8IKJqqdntEszNahxluxzZZbOOP6q4hjsq7npfgLV0=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fru%2FMicrosoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>QkN1vRXsnpyKnqKXEO4HMK+JUjZcpFeBW6UOuAlwmLk=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fru%2FMicrosoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>YR1TVi2UqBjcWE631uDgnt6O6o8X/CIMpoPoPoKITNc=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fru%2FMicrosoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>xrr+NhD98FRUxNOEg6W4kQH2XUhlG7OG/dBX4gimQYE=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fru%2FMicrosoft.TestPlatform.CoreUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>dtAgLSyx2+BX4gBIpa/UQ5OCdgshUjlVSH0LVZp9yS0=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fru%2FMicrosoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>DSeFICJMV+jP67/AswpnTfJ646N3Wqw/Pz7MW4rYNJQ=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fsmallwindow.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>Vk8w7WlAorMbVeVuwlpNpU3/xZvOiWFWovlRI5Q5DFw=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FrightCorner.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>b7CGIR/Ft7v4MnBZmQTudE2CkJy9ztdWfwDSiE7iVdE=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_wearable_switch_icon.json">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>PkxOABG9kgeDOcYqMGGbEboM0GfCiuSAiVFq1rmcmT8=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_wearable_radiobutton_icon.json">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>WZkxo0nSZXX4/cGlmuBQD+vYqrNtzCX7muw9OU3zN90=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_wearable_circular_pagination_center_normal_dot.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>BT4CyqTRob/+p8ib7wLmRW9w/J4ZMDXGqigInK/vFCA=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_wearable_circular_pagination_center_focus_dot.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>y6rgprWtg3qBMXr0QRD6SON/VwlvFOcmD5TKvBh4G8U=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_wearable_checkbox_icon.json">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>O45bsMR/1coy4i9dSDA6PLabCIhK5KaGt71COdDVdpI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_component_default_slider_value_indicator.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>ZgdF/EOmNOOXTmqaU1Tx7muB/fSZYfU8B8mJz3pwZSA=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_component_default_slider_thumb_n.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>4+V1is3jeMic5G4Z8usWvLBAS3YwrhBsNMX6vFX9ULg=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_component_default_slider_thumb_bg_p.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>TY4EFDZHaEJCZ46yRdebMV53cwJ3XFMWN5mltl9qUTk=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_component_default_scroll_vbar.%23.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>96HuD4NfWZ4zTa6Wl7lB8c9cwB/mAHtJ/oJU3N9TxwE=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_component_default_scroll_over_shooting_top.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>gxWJCrr4OYfv3QaQo7WbdRwwhU1IBlUzyblZCSw/8sE=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_component_default_scroll_over_shooting_right.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>7jIrai5ssr8ak1bkaUJAkSKmv00sNtvrxBgwhfqdHKk=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_component_default_scroll_over_shooting_left.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>FBWmPmuLpdgcq3eo9N8aW7Pyqxvm1LkVmW3DkpH/qOs=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_component_default_scroll_over_shooting_bottom.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>n8r76kB4C6gkVElTC2XVFzhLYPnsq+Q4GsKA5JB97sk=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_component_default_scroll_hbar.%23.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>Be3wfVVaeLhzE+g816l5xUIcZ53HrAfrC0ys9WhJbCQ=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_component_default_progress_indeterminate.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>374/nN/1T4Y4pu1nM2awVnKV77+qpRedLyhIrQflCRg=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_component_default_popup_shadow.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>xzGRMwNwG66lcUm4VBowhJeLwkXCHs8ot2kLlUeHDuk=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_component_default_pagination_normal_dot.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>FPvcCbvkc1MdaeM+Y66MbTRoVu4K8ecn9kUJ+BTDuZs=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_component_default_pagination_focus_dot.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>nWqAbKT3h1R+ipX7J9x4g8EdK3DJezkmsF1F1EgeyKY=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_component_default_dropdown_list_bg.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>HYU64pXFz0Puae54f+Ak0KXRXuEIVNI99AHR/2/tnM4=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_component_default_dropdown_button_icon.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>oPlSS40Sc027d+h1x6PBPpCNl/5SjIy1ZrTy44BmofQ=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_component_default_dialog_bg.%23.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>Nc54ctrzcfj6hWmwCkOKz/PNlECAGiFbHNC0XPeqElI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fnui_component_default_back_button.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>Eo3MOC0y8XwvGoc2R6PkjKj6nEHauJyvW1zt5Cpj1Fo=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fminimalize.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>+YtvLn4L4eWLBfdGm4Jd0jIC5+1BsSTPjMMmYXs6rp4=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fmaximalize.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>2R6FwFM0mtOn/6T7zvw8YeyUAwnX83Cbdc6SBGYS4EY=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FleftCorner.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>G0enVOZY52v6Kj54lJ4q5uVlz3b0Jyz82+jEeI9E7GU=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fkeyboard_focus.9.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>kqYdes9Ic0mTkBoki3vg77kiX/Iz6eMnXtSBmdgvYo8=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT-selection-popup-border.9.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>q+Eym/y5DxqdPBnssnUFWsjC+f69dUaMoV9ncn6k6/g=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT-selection-popup-background.9.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>BDIaCbKL7z1qFoZyJl7w+3CBJOW9y4H+cYePAVPDasI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_switch_track_on.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>14OIUawZj7HGKyhr7wYp4LTHMqaSGRTBYx/fhDsJlbw=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_switch_track_on_p.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>14OIUawZj7HGKyhr7wYp4LTHMqaSGRTBYx/fhDsJlbw=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_switch_track_on_f.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>4HfB4VpE2bstwxvKyWfEv7EtDV8trwqll9OWL/djOr4=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_switch_track_on_d.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>LuAnugrLSaqR8KW786LzAGrOfVThnoP+r3hc4fI+XPw=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_switch_track_off.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>W8PtSSprQrsW/jVb9YvTHD0q6RRKD+zmrPcuEtbSrkU=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_switch_track_off_p.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>W8PtSSprQrsW/jVb9YvTHD0q6RRKD+zmrPcuEtbSrkU=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_switch_track_off_f.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>x8QFSH9AW/pFO4qZrAwokQ04Y/gSbqOjDmp1LSuXkj4=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_switch_track_off_d.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>LuAnugrLSaqR8KW786LzAGrOfVThnoP+r3hc4fI+XPw=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_switch_thumb.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>VtPrkQxdb5pMj1ChKgrigxzqdWQJevr3wZx01u46RM0=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_switch_thumb_sp.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>RRDUrlKHLkicE7WKAmoEDVcmMNDkRvSknfzeam37yAI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_switch_thumb_sf.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>RRDUrlKHLkicE7WKAmoEDVcmMNDkRvSknfzeam37yAI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_switch_thumb_s.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>RRDUrlKHLkicE7WKAmoEDVcmMNDkRvSknfzeam37yAI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_switch_thumb_d.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>j/xVPDI2tUhr5+F4WH1geR/nHl4f+aSHBH457vhlY+s=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_slider_status_trackW.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>F4HUVEg1z6ddqeSqTBp5dZlBoXY1qi82lN4ZyMYahJY=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_slider_status_track.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>EsC2APWbg2lAtRLhBZ2T6lRGciq02woFr98KdRn3QEQ=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_slider_status_track_disabled.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>BRknYh3JORPuqbSXbWlZTGUrrqbqv0FwUg0J663Aa9A=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_slider_status_empty_track.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>7fm8iv/qjtn4waPi27hlaH9dCtn7RZa3jYFxm7PflGs=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_slider_handler_pressedW.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>l4rtCfBmJacPmhiB9dOI9VnGvVB7k4KNv4qMXwBPZas=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_slider_handler_pressed.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>vQ25yt5LhbEKef+KtD7fjjupvPoArPdAJyn85/WrLw4=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_slider_handler_normalW.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>vIshoylioX7TcPPu2N02qebu5IG9l1VPn8ue0KLFT/8=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_slider_handler_normal.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>ad2CsV7DRPKCAgx7JTV3M6ZofFY0IDSgId7g0EpAyt4=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_slider_handler_focused.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>AR/M89Au3PFwuKC5gZVXVphteHvRf2l8c32qUgDQM8E=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_slider_handler_disabled.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>v4nbb6U9OXFohQ5c1y/NO0tMiCp6oHlN9+DDDlot3Mg=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_radiobutton_on.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>FJ81TApUf3JhCSxXWB5wxHi+/SP9VXvQcHFhITfdSwc=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_radiobutton_on_p.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>lTB4IcaSNcVwa0nX+DQstOUCEsxav6BiOaaTHwvGOS4=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_radiobutton_on_f.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>0QmPuA++96vG94CG36be1eAWKFTgAgKG+zKjI+B+uZA=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_radiobutton_on_d.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>XnPlouFaV/kDusOFNF4lECXgJe0Gw7AvM64qwkLjdfs=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_radiobutton_off.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>BrV3Fh9121uUWY2/NtXu5YZPBzbYeC+k9HModp+tBzI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_radiobutton_off_p.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>zHJOfIBYhjfJ+Lf8AYiDrahSAsnj0YTm98IhcRYsEUM=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_radiobutton_off_f.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>YKncVHETnXyA9nyiNIxT7vokTZ79WrQr/GhToALeJ6I=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_radiobutton_off_d.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>IHujf4Ac8pYh14wRK+o7JpBaptXQ2n28nxhRTkBwcF4=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_progressindicator_progressdisabled.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>ngKql6JjTEh0+or5czQdRisI/xz5T+eGTlfmp1M2c0M=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_progressindicator_progress.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>Qh1UjHtDzYNQSVQTRqWZzhlU75y7hCQ867IGii7yzNo=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_progressindicator_progress_dark.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>+AYoWExdMu/8BwKxtxwJXODnTPVwZYuxGRNa9X98/kU=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_progressindicator_empty.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>z41yfQ+RFR9+maHMF/sVMwl/lMErM5TKqoaXUqT6jzw=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_progress_indeterminate.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>Z3r/rP8G68o/KVzS2wf8jX5jA54xZN1Bs8ZBxQFs9L0=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_loading_circle_light.json">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>xMI8m/CzUHCktCpvK2+e4s3sUH0gnZ1Y2o/8izFaF6A=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_handler_downrightW.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>yFwSPAVWvfAACiqmpvWyKhhT6ztKFSOQoNXphwjgUcs=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_handler_downleftW.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>xjN2u2uXg04GNwv4CeCOyTeJKAmB5gcT/TLl02c2JaY=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_handler_center_downW.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>Jlcgvm5n5btJRBTptR+NKcnfgN+3eBFEoWYwgoepUTI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_check_on.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>aiEdkdFfacIDTtSX2DhrT3FbBU5fyoiQvLW+yvRcESo=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_check_on_p.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>aiEdkdFfacIDTtSX2DhrT3FbBU5fyoiQvLW+yvRcESo=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_check_on_f.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>sXLI0QXTCtG4f+MYHHY3DppUTnTndXFs82emA38lKtQ=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_check_on_d.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>rWjwG1J7IOB/ZvWcdd6avpuelse7PNYj/Qs6o9XxWMs=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_check_off.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>LPfV4JtEWUr+RZpjqFRImOeNfYkuyTxNUmMVQf1oCis=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_check_off_p.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>LPfV4JtEWUr+RZpjqFRImOeNfYkuyTxNUmMVQf1oCis=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_check_off_f.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>XGg/NxCYMHzBqaYEM/Xs/+AcqVwPRFDaOmuIZJXKKyQ=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2FIoT_check_off_d.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>i7xryRj0+npGTUCYqXlhB9yQ80MVuKerlGy1wNZFuOg=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fdark_smallwindow.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>UA846cSrZysYHCR9EN7Q4XBKzaJ2b+EtKDYX6o+ylPU=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fdark_rightCorner.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>MHc5hXE9fgCafK0OOgCh+HRJ8xsb45wisdYF/7HBKfg=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fdark_minimalize.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>0iGeatWtfq2chD0pu47qoBlSs6/FTHHC9Ra3xkP4h00=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fdark_maximalize.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>4LrbNb/GKsLA8IujJlyKt9Zl1wUuxtVFSURJoQdk2Zg=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fdark_leftCorner.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>XysQhqDeKxqztx5Ii5JUv1c6VY/B6CPHWG2vfmDvRd0=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fdark_close.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>cuA38/2LKhhQdJnN9jJcFfeh/q6FW6OlHsilG7Vl/X8=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fres%2Fclose.png">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>PlLTyXVhJd5/IqmTc1LCOJTZ+RWl70PPDE2TQfmMf4w=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fpt-BR%2FMicrosoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>hET26/M+tSGeMNxYVzztxYyWQ/i3RO2KP5IOE06ipdE=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fpt-BR%2FMicrosoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>9IS3R9zecjRacjBtoiBq3WEJfsxqSNzXDF6Wxz61SAQ=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fpt-BR%2FMicrosoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>YCjZWr5c3ZTlE3lStSWYknwtbJJX3YCD1moLOm3Ws2Y=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fpt-BR%2FMicrosoft.TestPlatform.CoreUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>qyRxNxZVHU1BzNYBF45LeQjfYYpdfabpQ2vjOXl3f9A=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fpt-BR%2FMicrosoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>LYgK/Qx3yLb1xzkqh6MJrMYm/lBiJpKJxv1dOp0mWoY=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fpl%2FMicrosoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>CB43yp6Xn7LcUv5rLXymNblbJL0DbzT5/gnPzb6HY00=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fpl%2FMicrosoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>LRTMn5Tkoj/fKW18ybLXCxdMgM+pN8H/LZVNMhYjftE=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fpl%2FMicrosoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>b587T0mM4NO3WPf6fq0hb2P3TnUCkbm4nkCyO6BdEz4=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fpl%2FMicrosoft.TestPlatform.CoreUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>dqUfW/SFS7QZI+yfbWQBOGuv5nqG/BEGJ3hzk0mMf/s=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fpl%2FMicrosoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>Tc1Q/tOM9Km5o4GSqHohlvROrED6eAJpUjEiiBiC4+g=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FNUnit3.TestAdapter.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>SkwtTYSGAvQds3fKLUHatX7mi/TwtG4b7e2N900uRy0=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FNUnit3.TestAdapter.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>cRu8/FiWr+w4hIVcPpbc98qLgYKU3dKhzQvusbN60Vk=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fnunit.framework.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>T60JY260KPGNbewKbvctUaa/5LicJIB4pncyWobQTPk=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fnunit.engine.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>QL1AxrkG+ax4S0TbbGIsExhJNyvlW7wCdhI5qbIThRw=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fnunit.engine.core.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>LvsbZUW89cbhnCwODA/kf4uvEjElFIRzFby/DLiNcp4=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fnunit.engine.api.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>iEy/pRDcedqpnfbxDHl1rKpK/49lNbuVt0BwZnfxVco=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FNuGet.Frameworks.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>ve+HnwpKsq2X/pNPVOMK7g0GrQaj7ykpMzCPyjSQbvg=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FNewtonsoft.Json.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>XZbuUbKv9ZIDnuvC7SA9n1X935wIgvs00/DgeDdJVKU=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FMicrosoft.VisualStudio.TestPlatform.ObjectModel.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>c+COjALJBDHA4qSHjl51CUM+elT5YEIjm5El2ek26t0=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FMicrosoft.VisualStudio.TestPlatform.Common.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>7Zjf9NE4cr2GnPWGzvsRJEk7zHqPPGIkZDC/iFCFDOc=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FMicrosoft.VisualStudio.CodeCoverage.Shim.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>E1pR9pZEpCDNfoCLjGjD18sIk0rsnCL158lxvC2ilt4=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FMicrosoft.TestPlatform.Utilities.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>J5FoPOr5iQTTUegBkmn0MRQK6UbDwjGVsPHgUld4E44=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FMicrosoft.TestPlatform.PlatformAbstractions.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>L3ZCkALtmcX2fFlbYgyRrt1Alh2RdZab8bTARVnjMuk=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FMicrosoft.TestPlatform.CrossPlatEngine.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>Br/WgA5egZIg2MIQgeLtnjfHTAziE8oZe44RoL/V0+4=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FMicrosoft.TestPlatform.CoreUtilities.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>77w+IfTx7weLukgPE/pQJt/SBjxJ8TcULJ0fFBWnKPI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FMicrosoft.TestPlatform.CommunicationUtilities.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>M7a/Saiq4A9bKE/dkF11fhrT3zJeoUkkT+h3t5ynF98=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FMicrosoft.DotNet.InternalAbstractions.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>r9IroqEYZF4EnifWUWTJcSXkFpNNHL0W+g8jHQ/mj1s=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fko%2FMicrosoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>4TeRHrI/Yjnbke2QgBo+OUNJ72RcBiMwF/9p7uuq0MU=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fko%2FMicrosoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>Qohe3g2FNhSXLREMRV8T/N1tcjbp7FoDzX1GTjjHT48=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fko%2FMicrosoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>ty2oh1N5JyCwH9WvM4K4ID9guVmoycUJP7fArHARI/Q=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fko%2FMicrosoft.TestPlatform.CoreUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>ts7O/upr8CgTsy6Rq8buIc+RG0ypck6bseRGLHKnODQ=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fko%2FMicrosoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>NTv4YpsCSRqocdsJQMCD7ARLsqRZO8gLINuUEjyDBXA=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fja%2FMicrosoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>FM7UWyb6SdHRYPuvu8icVsrERex+0kbDA7CoJtFJxBI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fja%2FMicrosoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>vKtmQuM801L1frbOIBCpjJakYvNHUeCtMMxNk8aCglI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fja%2FMicrosoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>cItQFyD2Hc5TCI3A1csWBGKFAcTgiJ5DvaPNnyEH6Es=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fja%2FMicrosoft.TestPlatform.CoreUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>ozXZEv6ACwlFGY7xhaXUxP/QlIH8VGOdm7PJoh/T6K0=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fja%2FMicrosoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>tqW0ACgbDzr1n5AMreEl8P49UBLVTF2H3ZfukDUJ2c4=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fit%2FMicrosoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>w7VL+gT8C7rUOtJQbWRTdn9/TzUmllRBouZ+B1Z4u3Q=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fit%2FMicrosoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>IP8WD4QzCL8CzvcsWwdrN/uztOhqkq7ha60Mpy6GzHM=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fit%2FMicrosoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>VF4R2L49f4rvlTxPb6SqMyeuToAZcfxkHIeVxQ4qa40=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fit%2FMicrosoft.TestPlatform.CoreUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>pHO5rdysSVjZNZiLKsuOT5K42Uvk3OYXV4ivEyM7LXI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fit%2FMicrosoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>tIVEPAd6pUvUrBc5rTpHbzjI3EujxofEkiGH3hodXOI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Ffr%2FMicrosoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>k5tx9gbmRqR6orc8Z8vavP8HJYOlRqvbzeeS3fxaI2Q=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Ffr%2FMicrosoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>MY+DN70I+yZSqYly9DcT+rfNaqcHzj5xGt20eyP0rIM=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Ffr%2FMicrosoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>c0PAePRvKe1tPookMLsVhNztG0Ckl4J605kJQfZOXK8=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Ffr%2FMicrosoft.TestPlatform.CoreUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>C+AeI2acYvktCOo3lfszKQZY54SQh0DPD5fOOwU7CrI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Ffr%2FMicrosoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>ZOZIFayJ6Nwljfika6zzj5oJ6LJfVej5kVeHNN9KJ1E=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fes%2FMicrosoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>O+RO86hbktgQbRw5quGsNTkBQCx3PNL4x97eEqMeIn8=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fes%2FMicrosoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>cJaDl/s6QdP9vHK9tSkQEMTMJnM8zmwKoO7Sht238EQ=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fes%2FMicrosoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>heEVMlTf0qT62HD4ipFZeURgXSFNLlPYTR7tuUdUitA=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fes%2FMicrosoft.TestPlatform.CoreUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>v/RFmHv+omyqMHOAUx9RMrfF+G52ZgMxqObnQMmHoLY=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fes%2FMicrosoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>5n/zfdJ0zSStWW+IhkokPd1MAt39bRLIrwILUKwwXiA=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FElmSharp.xml">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>0VjVm/G7hbG6nUpqeD9EGFpKgsNZMlH1yPk6Nars6jk=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FElmSharp.pdb">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>t7l40KLVcG5u6AHOOQr/dCg4B5xiRNFKAF2iPVnELPc=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2FElmSharp.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>5IhQMjwQPwAwUIYdqRCodInQuOP7PuoEY1xEjS8ZpVE=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fde%2FMicrosoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>3ntqJ3ExPGLeGOjwvkzl2/clwbMkwqNCmJK7tXruBZg=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fde%2FMicrosoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>n7zCBE5tBykFoE1Y3clphKhWA0eZ6hoW+BGaqi74t04=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fde%2FMicrosoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>AZ9vYiW7M5PrzOiOZ1DH66TsHe80ZSGdq0NXXOe4uys=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fde%2FMicrosoft.TestPlatform.CoreUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>jL2WZ+KztmVzxgKLuwi26SakFdiKmLbExlKeIhku4e8=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fde%2FMicrosoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>OXUhUAh5zN36/o94uzd8m2lKnnqBxOQRRYxLT6ZgYqw=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fcs%2FMicrosoft.VisualStudio.TestPlatform.ObjectModel.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>dM+g3D3mQ8VROjlWio1YgrTzcUzXOcO4drzA3aRqHvI=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fcs%2FMicrosoft.VisualStudio.TestPlatform.Common.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>AecmMgdoLZtw1fbiGNi97lC7PMOmJeT/wNv6G6wbl1c=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fcs%2FMicrosoft.TestPlatform.CrossPlatEngine.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>gMYmQ0V0+5/TRdz4Ii5VSnGAAdZ9EMgWijMia+Zkn0Y=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fcs%2FMicrosoft.TestPlatform.CoreUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>dFn2d1T5AN1CDxI9nu6EqbrTHCAjA95q6SXB3T3houA=</DigestValue>
+    </Reference>
+    <Reference URI="bin%2Fcs%2FMicrosoft.TestPlatform.CommunicationUtilities.resources.dll">
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>HcZv+wgs/8bF41YFrr4lMVJEwkUwVao2IDASrIskbuk=</DigestValue>
+    </Reference>
+    <Reference URI="#prop">
+      <Transforms>
+        <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      </Transforms>
+      <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+      <DigestValue>e2rGZ9lURQWep1IIbrRk2NYMw5EXlejQt2B0bMLUyoc=</DigestValue>
+    </Reference>
+  </SignedInfo>
+  <SignatureValue>
+R46sNqovBY5ITEdVUAJQy1ObMsvOKZDtEjP1Esr5XxPBsKDoGMM1c1PFD3zV4sBQRJdNBebMOHFg
+OzjjdASDHnCPQF0BDJoY8hF7Y+V+rPRgrUaUl+YvfJpEC/xp1GK1PGbevtx5Gz6+sN5YhUigpI6u
+woXSSwOo597G/aD+ZTc=
+</SignatureValue>
+  <KeyInfo>
+    <X509Data>
+      <X509Certificate>
+MIIClTCCAX2gAwIBAgIGAVYhXgiqMA0GCSqGSIb3DQEBBQUAMFYxGjAYBgNVBAoMEVRpemVuIEFz
+c29jaWF0aW9uMRowGAYDVQQLDBFUaXplbiBBc3NvY2lhdGlvbjEcMBoGA1UEAwwTVGl6ZW4gRGV2
+ZWxvcGVycyBDQTAeFw0xMjExMDEwMDAwMDBaFw0xOTAxMDEwMDAwMDBaMBExDzANBgNVBAMMBmF1
+dGhvcjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEApm4Xqu2NAxOEh4Fgo0w6j+Q9MccSOPny
+mkyM3XMn0nL7mFKL4ZETxyRXlMU8DnM9l4zsEH3iS15cZknesUrCEAiuhL4fsp05ZSr6ERCYQrXs
+06WPmepipiM7n6BWzCsSmv0qNxkYWjZODWT2+15PsXfvwsK9wsrjSDIT8SuYV48CAwEAAaMyMDAw
+DAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCB4AwEwYDVR0lBAwwCgYIKwYBBQUHAwMwDQYJKoZIhvcN
+AQEFBQADggEBAMqla3XZiV3xAQe3laSgVJvmtEsjl3Zfp7Nufrobsl4pxQhVbOITomeEqrJkn4e6
+zzfsjQQ6nw0yXqeo6qfP1ez8Wvr/egyfO6BrnARX37K5cXszpIn7IvO6xl4Ux/rtp4vvQXDcrDS5
+F07d9tg+5UO6MC/9cKaCNEIxSkXEhjOf5x2LGg686fq5V4WEKCO2ApkJRXn+tFRArysrT5FPEnus
+NG+XhHWJw58HgBrZFl0SOUJQvzi3xv5xVPml65qwbehmQyu+LcgWeKySO46nzF0AXlCTaC78FGYk
+nrG2yFeWO6SWXGV7uxgizufT+s851rPFg/EWYEjqX4jU/jp7Swg=
+</X509Certificate>
+      <X509Certificate>
+MIIDOTCCAiGgAwIBAgIBATANBgkqhkiG9w0BAQUFADBYMRowGAYDVQQKDBFUaXplbiBBc3NvY2lh
+dGlvbjEaMBgGA1UECwwRVGl6ZW4gQXNzb2NpYXRpb24xHjAcBgNVBAMMFVRpemVuIERldmVsb3Bl
+cnMgUm9vdDAeFw0xMjAxMDEwMDAwMDBaFw0yNzAxMDEwMDAwMDBaMFYxGjAYBgNVBAoMEVRpemVu
+IEFzc29jaWF0aW9uMRowGAYDVQQLDBFUaXplbiBBc3NvY2lhdGlvbjEcMBoGA1UEAwwTVGl6ZW4g
+RGV2ZWxvcGVycyBDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANVGhRGmMIUyBA7o
+PCz8Sxut6z6HNkF4oDIuzuKaMzRYPeWodwe9O0gmqAkToQHfwg2giRhE5GoPld0fq+OYMMwSasCu
+g8dwODx1eDeSYVuOLWRxpAmbTXOsSFi6VoWeyaPEm18JBHvZBsU5YQtgZ6Kp7MqzvQg3pXOxtajj
+vyHxiatJl+xXrHgcXC1wgyG3buty7u/Fi2mvKXJ0PRJcCjjK81dqe/Vr20sRUCrbk02zbm5ggFt/
+jIEhV8wbFRQpliobc7J4dSTKhFfrqGM8rdd54LYhD7gSI1CFSe16pUXfcVR7FhJztRaiGLnCrwBE
+dyTZ248+D4L/qR/D0axb3jcCAwEAAaMQMA4wDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOC
+AQEAnOXXQ/1O/QTDHyrmQDtFziqPY3xWlJBqJtEqXiT7Y+Ljpe66e+Ee/OjQMlZe8gu21/8cKklH
+95RxjopMWCVedXDUbWdvS2+CdyvVW/quT2E0tjqIzXDekUTYwwhlPWlGxvfj3VsxqSFq3p8Brl04
+1Gx5RKAGyKVsMfTLhbbwSWwApuBUxYfcNpKwLWGPXkysu+HctY03OKv4/xKBnVWiN8ex/Sgesi0M
++OBAOMdZMPK32uJBTeKFx1xZgTLIhk45V0hPOomPjZloiv0LSS11eyd451ufjW0iHRE7WlpR6EvI
+W6TFyZgMpQq+kg4hWl2SBTf3s2VI8Ygz7gj8TMlClg==
+</X509Certificate>
+    </X509Data>
+  </KeyInfo>
+  <Object Id="prop">
+    <SignatureProperties xmlns:dsp="http://www.w3.org/2009/xmldsig-properties">
+      <SignatureProperty Id="profile" Target="#AuthorSignature">
+        <dsp:Profile URI="http://www.w3.org/ns/widgets-digsig#profile" />
+      </SignatureProperty>
+      <SignatureProperty Id="role" Target="#AuthorSignature">
+        <dsp:Role URI="http://www.w3.org/ns/widgets-digsig#role-author" />
+      </SignatureProperty>
+      <SignatureProperty Id="identifier" Target="#AuthorSignature">
+        <dsp:Identifier />
+      </SignatureProperty>
+    </SignatureProperties>
+  </Object>
+</Signature>

@@ -1,0 +1,1154 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/anz/TIZEN/dali/TizenFX/test/VariableFonts/VariableFonts/VariableFonts.csproj": {}
+  },
+  "projects": {
+    "/home/anz/TIZEN/dali/TizenFX/src/ElmSharp/ElmSharp.csproj": {
+      "version": "5.0.0-preview1",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/src/ElmSharp/ElmSharp.csproj",
+        "projectName": "ElmSharp",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/ElmSharp/ElmSharp.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/src/ElmSharp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.Common/Tizen.Applications.Common.csproj": {
+      "version": "5.0.0-preview1",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.Common/Tizen.Applications.Common.csproj",
+        "projectName": "Tizen.Applications.Common",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.Common/Tizen.Applications.Common.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.Common/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.ComponentBased/Tizen.Applications.ComponentBased.csproj": {
+      "version": "5.0.0-preview1",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.ComponentBased/Tizen.Applications.ComponentBased.csproj",
+        "projectName": "Tizen.Applications.ComponentBased",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.ComponentBased/Tizen.Applications.ComponentBased.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.ComponentBased/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.Common/Tizen.Applications.Common.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.Common/Tizen.Applications.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.ThemeManager/Tizen.Applications.ThemeManager.csproj": {
+      "version": "5.0.0-preview1",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.ThemeManager/Tizen.Applications.ThemeManager.csproj",
+        "projectName": "Tizen.Applications.ThemeManager",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.ThemeManager/Tizen.Applications.ThemeManager.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.ThemeManager/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj": {
+      "version": "5.0.0-preview1",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj",
+        "projectName": "Tizen.Log",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "System.Memory": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia.Camera/Tizen.Multimedia.Camera.csproj": {
+      "version": "5.0.0-preview1",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia.Camera/Tizen.Multimedia.Camera.csproj",
+        "projectName": "Tizen.Multimedia.Camera",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia.Camera/Tizen.Multimedia.Camera.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia.Camera/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia/Tizen.Multimedia.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia/Tizen.Multimedia.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia.MediaPlayer/Tizen.Multimedia.MediaPlayer.csproj": {
+      "version": "5.0.0-preview1",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia.MediaPlayer/Tizen.Multimedia.MediaPlayer.csproj",
+        "projectName": "Tizen.Multimedia.MediaPlayer",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia.MediaPlayer/Tizen.Multimedia.MediaPlayer.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia.MediaPlayer/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia/Tizen.Multimedia.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia/Tizen.Multimedia.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia/Tizen.Multimedia.csproj": {
+      "version": "5.0.0-preview1",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia/Tizen.Multimedia.csproj",
+        "projectName": "Tizen.Multimedia",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia/Tizen.Multimedia.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/anz/TIZEN/dali/TizenFX/src/ElmSharp/ElmSharp.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/ElmSharp/ElmSharp.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.Common/Tizen.Applications.Common.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.Common/Tizen.Applications.Common.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI/Tizen.NUI.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI/Tizen.NUI.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.Information/Tizen.System.Information.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.Information/Tizen.System.Information.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Components/Tizen.NUI.Components.csproj": {
+      "version": "5.0.0-preview1",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Components/Tizen.NUI.Components.csproj",
+        "projectName": "Tizen.NUI.Components",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Components/Tizen.NUI.Components.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Components/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI/Tizen.NUI.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI/Tizen.NUI.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.Feedback/Tizen.System.Feedback.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.Feedback/Tizen.System.Feedback.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.Information/Tizen.System.Information.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.Information/Tizen.System.Information.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Extension/Tizen.NUI.Extension.csproj": {
+      "version": "5.0.0-preview1",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Extension/Tizen.NUI.Extension.csproj",
+        "projectName": "Tizen.NUI.Extension",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Extension/Tizen.NUI.Extension.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Extension/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI/Tizen.NUI.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI/Tizen.NUI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Wearable/Tizen.NUI.Wearable.csproj": {
+      "version": "5.0.0-preview1",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Wearable/Tizen.NUI.Wearable.csproj",
+        "projectName": "Tizen.NUI.Wearable",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Wearable/Tizen.NUI.Wearable.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Wearable/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.Common/Tizen.Applications.Common.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.Common/Tizen.Applications.Common.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Components/Tizen.NUI.Components.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Components/Tizen.NUI.Components.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI/Tizen.NUI.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI/Tizen.NUI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI/Tizen.NUI.csproj": {
+      "version": "5.0.0-preview1",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI/Tizen.NUI.csproj",
+        "projectName": "Tizen.NUI",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI/Tizen.NUI.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.Common/Tizen.Applications.Common.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.Common/Tizen.Applications.Common.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.ComponentBased/Tizen.Applications.ComponentBased.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.ComponentBased/Tizen.Applications.ComponentBased.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.ThemeManager/Tizen.Applications.ThemeManager.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.ThemeManager/Tizen.Applications.ThemeManager.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.Information/Tizen.System.Information.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.Information/Tizen.System.Information.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.SystemSettings/Tizen.System.SystemSettings.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.SystemSettings/Tizen.System.SystemSettings.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Tracer/Tizen.Tracer.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Tracer/Tizen.Tracer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Reflection.TypeExtensions": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.Feedback/Tizen.System.Feedback.csproj": {
+      "version": "5.0.0-preview1",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.Feedback/Tizen.System.Feedback.csproj",
+        "projectName": "Tizen.System.Feedback",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.Feedback/Tizen.System.Feedback.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.Feedback/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.Information/Tizen.System.Information.csproj": {
+      "version": "5.0.0-preview1",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.Information/Tizen.System.Information.csproj",
+        "projectName": "Tizen.System.Information",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.Information/Tizen.System.Information.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.Information/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.SystemSettings/Tizen.System.SystemSettings.csproj": {
+      "version": "5.0.0-preview1",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.SystemSettings/Tizen.System.SystemSettings.csproj",
+        "projectName": "Tizen.System.SystemSettings",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.SystemSettings/Tizen.System.SystemSettings.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.SystemSettings/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Tracer/Tizen.Tracer.csproj": {
+      "version": "5.0.0-preview1",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Tracer/Tizen.Tracer.csproj",
+        "projectName": "Tizen.Tracer",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Tracer/Tizen.Tracer.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Tracer/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj": {
+      "version": "5.0.0-preview1",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj",
+        "projectName": "Tizen",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anz/TIZEN/dali/TizenFX/test/VariableFonts/VariableFonts/VariableFonts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/anz/TIZEN/dali/TizenFX/test/VariableFonts/VariableFonts/VariableFonts.csproj",
+        "projectName": "VariableFonts",
+        "projectPath": "/home/anz/TIZEN/dali/TizenFX/test/VariableFonts/VariableFonts/VariableFonts.csproj",
+        "packagesPath": "/home/anz/.nuget/packages/",
+        "outputPath": "/home/anz/TIZEN/dali/TizenFX/test/VariableFonts/VariableFonts/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "netcoreapp6.0",
+            "projectReferences": {
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.Common/Tizen.Applications.Common.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.Common/Tizen.Applications.Common.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.ComponentBased/Tizen.Applications.ComponentBased.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Applications.ComponentBased/Tizen.Applications.ComponentBased.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Log/Tizen.Log.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia.Camera/Tizen.Multimedia.Camera.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia.Camera/Tizen.Multimedia.Camera.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia.MediaPlayer/Tizen.Multimedia.MediaPlayer.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.Multimedia.MediaPlayer/Tizen.Multimedia.MediaPlayer.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Components/Tizen.NUI.Components.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Components/Tizen.NUI.Components.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Extension/Tizen.NUI.Extension.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Extension/Tizen.NUI.Extension.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Wearable/Tizen.NUI.Wearable.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI.Wearable/Tizen.NUI.Wearable.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI/Tizen.NUI.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.NUI/Tizen.NUI.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.SystemSettings/Tizen.System.SystemSettings.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen.System.SystemSettings/Tizen.System.SystemSettings.csproj"
+              },
+              "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj": {
+                "projectPath": "/home/anz/TIZEN/dali/TizenFX/src/Tizen/Tizen.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "netcoreapp6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.6.1, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.17.0, )"
+            },
+            "Tizen.NET.Sdk": {
+              "target": "Package",
+              "version": "[1.0.9, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.428/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

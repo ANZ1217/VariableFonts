@@ -1,0 +1,3289 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tizen.Multimedia.Camera</name>
+    </assembly>
+    <members>
+        <member name="T:Tizen.Multimedia.Camera">
+            <summary>
+            This camera class provides methods to capture photos and supports setting up notifications
+            for state changes of capturing, previewing, focusing, and informing about the resolution and the binary format,
+            and functions for picture manipulations like sepia, negative, and many more.
+            It also notifies you when a significant picture parameter changes, (For example, focus).
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+            <summary>
+            This camera class provides methods to capture photos and supports setting up notifications
+            for state changes of capturing, previewing, focusing, and informing about the resolution and the binary format,
+            and functions for picture manipulations like sepia, negative, and many more.
+            It also notifies you when a significant picture parameter changes, (For example, focus).
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+            <summary>
+            This camera class provides methods to capture photos and supports setting up notifications
+            for state changes of capturing, previewing, focusing, and informing about the resolution and the binary format,
+            and functions for picture manipulations like sepia, negative, and many more.
+            It also notifies you when a significant picture parameter changes, (For example, focus).
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+        </member>
+        <member name="M:Tizen.Multimedia.Camera.#ctor(Tizen.Multimedia.CameraDevice)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tizen.Multimedia.Camera"/> class.
+            </summary>
+            <param name="device">The camera device to access.</param>
+            <exception cref="T:System.ArgumentException">Invalid CameraDevice type.</exception>
+            <exception cref="T:System.InvalidOperationException">In case of any invalid operations.</exception>
+            <exception cref="T:System.NotSupportedException">The camera feature is not supported.</exception>
+            <since_tizen> 3 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+        </member>
+        <member name="M:Tizen.Multimedia.Camera.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tizen.Multimedia.Camera"/> class.
+            </summary>
+            <remarks>
+            If <see cref="T:Tizen.Multimedia.CameraDeviceManager"/> is supported, <see cref="T:Tizen.Multimedia.CameraDevice"/> will be selected automatically by internal policy.<br/>
+            (User can check whether CameraDeviceManager is supported or not by using <see cref="P:Tizen.Multimedia.CameraDeviceManager.IsCameraDeviceManagerSupported"/>.)<br/>
+            But, if not, this constructor will try to create Camera instance with <see cref="F:Tizen.Multimedia.CameraDevice.CameraDevice0"/> by default.
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">
+            There's no available camera device.
+                -or-<br/>
+            In case of any invalid operations.
+            </exception>
+            <exception cref="T:System.NotSupportedException">The camera feature is not supported.</exception>
+            <since_tizen> 12 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+            <seealso cref="P:Tizen.Multimedia.CameraDeviceManager.IsCameraDeviceManagerSupported"/>
+        </member>
+        <member name="M:Tizen.Multimedia.Camera.Finalize">
+            <summary>
+            Finalizes an instance of the Camera class.
+            </summary>
+        </member>
+        <member name="P:Tizen.Multimedia.Camera.Handle">
+            <summary>
+            Gets the native handle of the camera.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+        </member>
+        <member name="M:Tizen.Multimedia.Camera.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the camera.
+            </summary>
+            <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.Camera.Dispose">
+            <summary>
+            Releases all resources used by the camera.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+        </member>
+        <member name="M:Tizen.Multimedia.Camera.ChangeDevice(Tizen.Multimedia.CameraDevice)">
+            <summary>
+            Changes the camera device.
+            </summary>
+            <param name="device">The hardware camera to access.</param>
+            <since_tizen> 3 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+            <remarks>
+            If display reuse is set using <see cref="P:Tizen.Multimedia.Camera.DisplayReuseHint"/>
+            before stopping the preview, the display will be reused and last frame on the display
+            can be kept even though camera device is changed.
+            The camera must be in the <see cref="F:Tizen.Multimedia.CameraState.Created"/>.
+            </remarks>
+            <exception cref="T:System.ArgumentException">In case of invalid parameters.</exception>
+            <exception cref="T:System.InvalidOperationException">In case of any invalid operations.</exception>
+            <exception cref="T:System.NotSupportedException">In case of the ChangeDevice feature is not supported.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.Camera.GetDeviceState(Tizen.Multimedia.CameraDevice)">
+            <summary>
+            Gets the device state.
+            </summary>
+            <param name="device">The device to get the state.</param>
+            <returns>Returns the state of the camera device.</returns>
+            <since_tizen> 4 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+            <exception cref="T:System.ArgumentException">In case of invalid parameters.</exception>
+            <exception cref="T:System.InvalidOperationException">In case of any invalid operations.</exception>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+        </member>
+        <member name="M:Tizen.Multimedia.Camera.GetFlashState(Tizen.Multimedia.CameraDevice)">
+            <summary>
+            Gets the flash state.
+            </summary>
+            <param name="device">The device to get the state.</param>
+            <returns>Returns the flash state of the camera device.</returns>
+            <since_tizen> 3 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+            <exception cref="T:System.ArgumentException">In case of invalid parameters.</exception>
+            <exception cref="T:System.InvalidOperationException">In case of any invalid operations.</exception>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+        </member>
+        <member name="M:Tizen.Multimedia.Camera.StartPreview">
+            <summary>
+            Starts capturing and drawing preview frames on the screen.
+            The display property must be set using <see cref="P:Tizen.Multimedia.Camera.Display"/> before using this method.
+            If needed set fps <see cref="P:Tizen.Multimedia.CameraSettings.PreviewFps"/>, preview resolution
+            <see cref="P:Tizen.Multimedia.CameraSettings.PreviewResolution"/>, or preview format <see cref="P:Tizen.Multimedia.CameraSettings.PreviewPixelFormat"/>
+            before using this method.
+            The camera must be in the <see cref="F:Tizen.Multimedia.CameraState.Created"/> or the <see cref="F:Tizen.Multimedia.CameraState.Captured"/> state.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <privilege> http://tizen.org/privilege/camera </privilege>
+            <feature> http://tizen.org/feature/camera </feature>
+            <exception cref="T:System.InvalidOperationException">In case of any invalid operations.</exception>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+            <exception cref="T:System.UnauthorizedAccessException">In case of access to the resources cannot be granted.</exception>
+        </member>
+        <member name="M:Tizen.Multimedia.Camera.StopPreview">
+            <summary>
+            Stops capturing and drawing preview frames on the screen.
+            The camera must be in the <see cref="F:Tizen.Multimedia.CameraState.Preview"/> state.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <privilege> http://tizen.org/privilege/camera </privilege>
+            <feature> http://tizen.org/feature/camera </feature>
+            <exception cref="T:System.InvalidOperationException">In case of any invalid operations.</exception>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+            <exception cref="T:System.UnauthorizedAccessException">In case of access to the resources cannot be granted.</exception>
+        </member>
+        <member name="M:Tizen.Multimedia.Camera.StartCapture">
+            <summary>
+            Starts capturing of still images.
+            EventHandler must be set for capturing using <see cref="E:Tizen.Multimedia.Camera.Capturing"/>
+            and for completed using <see cref="E:Tizen.Multimedia.Camera.CaptureCompleted"/> before calling this method.
+            The camera must be in the <see cref="F:Tizen.Multimedia.CameraState.Preview"/> state.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <privilege> http://tizen.org/privilege/camera </privilege>
+            <feature> http://tizen.org/feature/camera </feature>
+            <remarks>
+            This function causes the transition of the camera state from capturing to captured
+            automatically and the corresponding EventHandlers will be invoked.
+            The preview should be restarted by calling the <see cref="M:Tizen.Multimedia.Camera.StartPreview"/> method after capture is completed.
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">In case of any invalid operations.</exception>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+            <exception cref="T:System.UnauthorizedAccessException">In case of access to the resources cannot be granted.</exception>
+        </member>
+        <member name="M:Tizen.Multimedia.Camera.StartCapture(System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Starts continuously capturing still images.
+            EventHandler must be set for capturing using <see cref="E:Tizen.Multimedia.Camera.Capturing"/>
+            and for completed using <see cref="E:Tizen.Multimedia.Camera.CaptureCompleted"/> before calling this method.
+            The camera must be in the <see cref="F:Tizen.Multimedia.CameraState.Preview"/> state.
+            </summary>
+            <param name="count">The number of still images.</param>
+            <param name="interval">The interval of the capture(milliseconds).</param>
+            <param name="cancellationToken">The cancellation token to cancel capturing.</param>
+            <seealso cref="T:System.Threading.CancellationToken"/>
+            <since_tizen> 3 </since_tizen>
+            <privilege> http://tizen.org/privilege/camera </privilege>
+            <feature> http://tizen.org/feature/camera </feature>
+            <remarks>
+            If this is not supported, zero shutter lag occurs. The capture resolution could be
+            changed to the preview resolution. This function causes the transition of the camera state
+            from capturing to captured automatically and the corresponding Eventhandlers will be invoked.
+            Each captured image will be delivered through Eventhandler set using the <see cref="E:Tizen.Multimedia.Camera.Capturing"/> event.
+            The preview should be restarted by calling the <see cref="M:Tizen.Multimedia.Camera.StartPreview"/> method after capture is completed.
+            </remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">In case of invalid parameters.</exception>
+            <exception cref="T:System.InvalidOperationException">In case of any invalid operations.</exception>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+            <exception cref="T:System.UnauthorizedAccessException">In case of access to the resources cannot be granted.</exception>
+        </member>
+        <member name="M:Tizen.Multimedia.Camera.StartFocusing(System.Boolean)">
+            <summary>
+            Starts camera auto-focusing, asynchronously.
+            The camera must be in the <see cref="F:Tizen.Multimedia.CameraState.Preview"/> or the <see cref="F:Tizen.Multimedia.CameraState.Captured"/> state.
+            </summary>
+            <param name="continuous">Continuous auto focus.</param>
+            <since_tizen> 3 </since_tizen>
+            <privilege> http://tizen.org/privilege/camera </privilege>
+            <feature> http://tizen.org/feature/camera </feature>
+            <remarks>
+            If continuous status is true, the camera continuously tries to focus.
+            </remarks>
+            <exception cref="T:System.ArgumentException">In case of invalid parameters.</exception>
+            <exception cref="T:System.InvalidOperationException">In case of any invalid operations.</exception>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+            <exception cref="T:System.UnauthorizedAccessException">In case of access to the resources cannot be granted.</exception>
+        </member>
+        <member name="M:Tizen.Multimedia.Camera.StopFocusing">
+            <summary>
+            Stops camera auto focusing.
+            The camera must be in the <see cref="F:Tizen.Multimedia.CameraState.Preview"/> or the <see cref="F:Tizen.Multimedia.CameraState.Captured"/> state.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <privilege> http://tizen.org/privilege/camera </privilege>
+            <feature> http://tizen.org/feature/camera </feature>
+            <exception cref="T:System.InvalidOperationException">In case of any invalid operations.</exception>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+            <exception cref="T:System.UnauthorizedAccessException">In case of access to the resources cannot be granted.</exception>
+        </member>
+        <member name="M:Tizen.Multimedia.Camera.StartFaceDetection">
+            <summary>
+            Starts face detection.
+            The camera must be in the <see cref="F:Tizen.Multimedia.CameraState.Preview"/> state.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <privilege> http://tizen.org/privilege/camera </privilege>
+            <feature> http://tizen.org/feature/camera </feature>
+            <remarks>
+            This should be called after <see cref="M:Tizen.Multimedia.Camera.StartPreview"/> is started.
+            The Eventhandler set using <see cref="E:Tizen.Multimedia.Camera.FaceDetected"/> is invoked when the face is detected in the preview frame.
+            Internally, it starts continuously focus and focusing on the detected face.
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">In case of any invalid operations.</exception>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+            <exception cref="T:System.UnauthorizedAccessException">In case of access to the resources cannot be granted.</exception>
+        </member>
+        <member name="M:Tizen.Multimedia.Camera.StopFaceDetection">
+            <summary>
+            Stops face detection.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <privilege> http://tizen.org/privilege/camera </privilege>
+            <feature> http://tizen.org/feature/camera </feature>
+            <exception cref="T:System.InvalidOperationException">In case of any invalid operations.</exception>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+            <exception cref="T:System.UnauthorizedAccessException">In case of access to the resources cannot be granted.</exception>
+        </member>
+        <member name="E:Tizen.Multimedia.Camera.InterruptStarted">
+            <summary>
+            An event that occurs when the camera interrupt is started by the policy.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="E:Tizen.Multimedia.Camera.Interrupted">
+            <summary>
+            An event that occurs when an camera is interrupted by the policy.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="E:Tizen.Multimedia.Camera.ErrorOccurred">
+            <summary>
+            An event that occurs when there is an asynchronous error.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="E:Tizen.Multimedia.Camera.FocusStateChanged">
+            <summary>
+            An event that occurs when the auto focus state is changed.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="E:Tizen.Multimedia.Camera.FaceDetected">
+            <summary>
+            An event that occurs when a face is detected in the preview frame.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="E:Tizen.Multimedia.Camera.Capturing">
+            <summary>
+            An event that occurs during capture of an image.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="E:Tizen.Multimedia.Camera.CaptureCompleted">
+            <summary>
+            An event that occurs after the capture of the image.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="E:Tizen.Multimedia.Camera.HdrCaptureProgress">
+            <summary>
+            An event that occurs when there is a change in the HDR capture progress.
+            Checks whether the <see cref="P:Tizen.Multimedia.CameraCapabilities.IsHdrCaptureSupported"/> is supported or not before adding this EventHandler.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.NotSupportedException">In case of HDR feature is not supported.</exception>
+        </member>
+        <member name="E:Tizen.Multimedia.Camera.StateChanged">
+            <summary>
+            An event that occurs when the camera state is changed.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="E:Tizen.Multimedia.Camera.DeviceStateChanged">
+            <summary>
+            An event that occurs after the <see cref="T:Tizen.Multimedia.CameraDeviceState"/> is changed.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.InvalidOperationException">In case of any invalid operations.</exception>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+            <exception cref="T:System.ArgumentException">In case of invalid parameters.</exception>
+        </member>
+        <member name="E:Tizen.Multimedia.Camera.Preview">
+            <summary>
+            An event that occurs once per frame when previewing.
+            Preview callback is registered when an user adds a callback explicitly to avoid useless P/Invoke.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="E:Tizen.Multimedia.Camera.MediaPacketPreview">
+            <summary>
+            An event that occurs once per frame when previewing.
+            Preview callback is registered when an user adds a callback explicitly to avoid useless P/Invoke.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="E:Tizen.Multimedia.Camera.ExtraPreview">
+            <summary>An event that occurs once per frame when previewing.</summary>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.Camera.Settings">
+            <summary>
+            Gets or sets the various camera settings.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.Camera.Capabilities">
+            <summary>
+            Gets the various camera capabilities.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.Camera.DisplaySettings">
+            <summary>
+            Get/set various camera display properties.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.Camera.Display">
+            <summary>
+            Sets or gets the display type and handle to show preview images.
+            The camera must be in the <see cref="F:Tizen.Multimedia.CameraState.Created"/> state.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <remarks>
+            This must be set before the StartPreview() method.
+            In custom ROI display mode, DisplayRoiArea property must be set before calling this method.
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">In case of any invalid operations.</exception>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+            <exception cref="T:System.ObjectDisposedException" > The camera has already been disposed. </exception>
+            <exception cref="T:System.UnauthorizedAccessException">In case of access to the resources cannot be granted.</exception>
+        </member>
+        <member name="P:Tizen.Multimedia.Camera.State">
+            <summary>
+            Gets the state of the camera.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value> None, Created, Preview, Capturing, Captured.</value>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.Camera.DisplayReuseHint">
+            <summary>
+            The hint for the display reuse.
+            If the hint is set to true, the display will be reused when the camera device is changed with
+            the ChangeDevice method.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ArgumentException">In case of invalid parameters.</exception>
+            <exception cref="T:System.InvalidOperationException">An invalid state.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.Camera.Direction">
+            <summary>
+            Gets the facing direction of the camera module.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value>A <see cref="T:Tizen.Multimedia.CameraFacingDirection"/> that specifies the facing direction of the camera device.</value>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.Camera.CameraCount">
+            <summary>
+            Gets the camera device count.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value>This returns 2, if the device supports primary and secondary cameras.
+            Otherwise 1, if the device only supports primary camera.</value>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraCapabilities">
+            <summary>
+            The CameraCapabilities class provides properties
+            to get various capability information of the camera device.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsFaceDetectionSupported">
+            <summary>
+            Gets the face detection feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsMediaPacketPreviewCallbackSupported">
+            <summary>
+            Gets the media packet preview callback feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsZeroShutterLagSupported">
+            <summary>
+            Gets the zero shutter lag feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsContinuousCaptureSupported">
+            <summary>
+            Gets the continuous capture feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsExtraPreviewSupported">
+            <summary>
+            Gets the extra preview feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsHdrCaptureSupported">
+            <summary>
+            Gets the HDR capture feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsAntiShakeSupported">
+            <summary>
+            Gets the anti-shake feature feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsVideoStabilizationSupported">
+            <summary>
+            Gets the video stabilization feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsAutoContrastSupported">
+            <summary>
+            Gets the auto contrast feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsBrigtnessSupported">
+            <summary>
+            Gets the brightness feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsExposureSupported">
+            <summary>
+            Gets the exposure feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsZoomSupported">
+            <summary>
+            Gets the zoom feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsPanSupported">
+            <summary>
+            Gets the pan feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsTiltSupported">
+            <summary>
+            Gets the tilt feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsHueSupported">
+            <summary>
+            Gets the hue feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsSaturationSupported">
+            <summary>
+            Gets the saturation feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 11 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsSharpnessSupported">
+            <summary>
+            Gets the sharpness feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 11 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsFocusLevelSupported">
+            <summary>
+            Gets the manual focus level feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 11 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsGainSupported">
+            <summary>
+            Gets the gain feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 11 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.IsWhiteBalanceTemperatureSupported">
+            <summary>
+            Gets the white balance temperature feature support state.
+            </summary>
+            <value>true if supported, otherwise false.</value>
+            <since_tizen> 11 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.SupportedPreviewResolutions">
+            <summary>
+            Retrieves all the preview resolutions supported by the camera.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+            <returns>
+            It returns a list containing all the supported preview resolutions.
+            </returns>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.SupportedCaptureResolutions">
+            <summary>
+            Retrieves all the capture resolutions supported by the camera.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+            <returns>
+            It returns a list containing all the supported capture resolutions.
+            </returns>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.SupportedCapturePixelFormats">
+            <summary>
+            Retrieves all the capture formats supported by the camera.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+            <returns>
+            It returns a list containing all the supported <see cref="T:Tizen.Multimedia.CameraPixelFormat"/>.
+            </returns>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.SupportedPreviewPixelFormats">
+            <summary>
+            Retrieves all the preview formats supported by the camera.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+            <returns>
+            It returns a list containing all the supported <see cref="T:Tizen.Multimedia.CameraPixelFormat"/>.
+            </returns>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.SupportedPreviewFps">
+            <summary>
+            Retrieves all the fps supported by the camera.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+            <returns>
+            It returns a list containing all the supported <see cref="T:Tizen.Multimedia.CameraFps"/>.
+            </returns>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraCapabilities.GetSupportedPreviewFpsByResolution(System.Int32,System.Int32)">
+            <summary>
+            Retrieves all the fps by resolution supported by the camera.
+            </summary>
+            <param name="width">The width of required preview resolution.</param>
+            <param name="height">The height of required preview resolution.</param>
+            <returns>
+            It returns a list containing all the supported <see cref="T:Tizen.Multimedia.CameraFps"/> by resolution.
+            </returns>
+            <since_tizen> 4 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraCapabilities.GetSupportedPreviewFpsByResolution(Tizen.Multimedia.Size)">
+            <summary>
+            Retrieves all the fps by resolution supported by the camera.
+            </summary>
+            <param name="size">The size of required preview resolution.</param>
+            <returns>
+            It returns a list containing all the supported <see cref="T:Tizen.Multimedia.CameraFps"/> by resolution.
+            </returns>
+            <since_tizen> 4 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.SupportedAutoFocusModes">
+            <summary>
+            Retrieves all the auto focus modes supported by the camera.
+            </summary>
+            <returns>
+            It returns a list containing all the supported <see cref="T:Tizen.Multimedia.CameraAutoFocusMode"/>.
+            </returns>
+            <since_tizen> 4 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.SupportedExposureModes">
+            <summary>
+            Retrieves all the exposure modes supported by the camera.
+            </summary>
+            <returns>
+            It returns a list containing all the supported <see cref="T:Tizen.Multimedia.CameraExposureMode"/>.
+            </returns>
+            <since_tizen> 4 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.SupportedIsoLevels">
+            <summary>
+            Retrieves all the ISO levels supported by the camera.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+            <returns>
+            It returns a list containing all the supported <see cref="T:Tizen.Multimedia.CameraIsoLevel"/>.
+            </returns>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.SupportedTheaterModes">
+            <summary>
+            Retrieves all the theater modes supported by the camera.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+            <returns>
+            It returns a list containing all the supported <see cref="T:Tizen.Multimedia.CameraTheaterMode"/>.
+            </returns>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.SupportedWhiteBalances">
+            <summary>
+            Retrieves all the white balance modes supported by the camera.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+            <returns>
+            It returns a list containing all the supported <see cref="T:Tizen.Multimedia.CameraWhiteBalance"/>.
+            </returns>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.SupportedFlashModes">
+            <summary>
+            Retrieves all the flash modes supported by the camera.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+            <returns>
+            It returns a list containing all the supported <see cref="T:Tizen.Multimedia.CameraFlashMode"/>.
+            </returns>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.SupportedSceneModes">
+            <summary>
+            Retrieves all the scene modes supported by the camera.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+            <returns>
+            It returns a list containing all the supported <see cref="T:Tizen.Multimedia.CameraSceneMode"/>.
+            </returns>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.SupportedEffects">
+            <summary>
+            Retrieves all the effect modes supported by the camera.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+            <returns>
+            It returns a list containing all the supported <see cref="T:Tizen.Multimedia.CameraEffectMode"/>.
+            </returns>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.SupportedStreamRotations">
+            <summary>
+            Retrieves all the stream rotations supported by the camera.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+            <returns>
+            An IEnumerable containing all the supported <see cref="T:Tizen.Multimedia.Rotation"/>.
+            </returns>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.SupportedStreamFlips">
+            <summary>
+            Retrieves all the flips supported by the camera.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+            <returns>
+            It returns a list containing all the supported <see cref="T:Tizen.Multimedia.Flips"/>.
+            </returns>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapabilities.SupportedPtzTypes">
+            <summary>
+            Retrieves all the PTZ types by the camera.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+            <returns>
+            It returns a list containing all the supported <see cref="T:Tizen.Multimedia.CameraPtzType"/>.
+            </returns>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraCapturingEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Tizen.Multimedia.Camera.Capturing"/> event.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapturingEventArgs.MainImage">
+            <summary>
+            Gets the main image data of the captured still image.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapturingEventArgs.PostView">
+            <summary>
+            Gets the image data of the post view.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraCapturingEventArgs.Thumbnail">
+            <summary>
+            Gets the image data of the thumbnail.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraDeviceConnectionChangedEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Tizen.Multimedia.CameraDeviceManager.DeviceConnectionChanged"/> event.
+            </summary>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraDeviceConnectionChangedEventArgs.CameraDeviceInformation">
+            <summary>
+            Gets the camera device information.
+            </summary>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraDeviceConnectionChangedEventArgs.IsConnected">
+            <summary>
+            Gets the connection status of camera device.
+            </summary>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraDeviceManager">
+            <summary>
+            This CameraDeviceManager class provides methods to control current camera devices and get its information.
+            </summary>
+            <remarks>
+            This supports the product infrastructure and is not intended to be used directly from 3rd party application code.
+            </remarks>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraDeviceManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tizen.Multimedia.CameraDeviceManager"/> class.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Invalid operation.</exception>
+            <exception cref="T:System.NotSupportedException">The camera device manager is not supported.</exception>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraDeviceManager.Finalize">
+            <summary>
+            Finalizes an instance of the Camera class.
+            </summary>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraDeviceManager.IsExternalCameraConnected">
+            <summary>
+            Gets the status whether camera device(usb, network) is connected or not.
+            </summary>
+            <returns>true if usb or network camera is connected.</returns>
+            <exception cref="T:System.ObjectDisposedException">The CameraDeviceManager already has been disposed.</exception>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraDeviceManager.IsCameraDeviceManagerSupported">
+            <summary>
+            Gets the state of Camera Device Manager support.
+            </summary>
+            <returns>true if camera device manager is supported.</returns>
+            <since_tizen> 11 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraDeviceManager.SupportedDevices">
+            <summary>
+            Retrieves all the supported camera devices and returns its information.
+            </summary>
+            <returns>
+            if camera device exist, returns list of <see cref="T:Tizen.Multimedia.CameraDeviceInformation"/>; otherwise returns Enumerable.Empty.
+            </returns>
+            <exception cref="T:System.ArgumentException">Invalid enumeration.</exception>
+            <exception cref="T:System.ArgumentNullException">name or id is null.</exception>
+            <exception cref="T:System.ObjectDisposedException">The CameraDeviceManager already has been disposed.</exception>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraDeviceManager.GetProductId(Tizen.Multimedia.CameraDevice)">
+            <summary>
+            Gets the product ID for given <param name="device"/>.
+            </summary>
+            <exception cref="T:System.ArgumentException">Invalid enumeration.</exception>
+            <exception cref="T:System.ObjectDisposedException">The CameraDeviceManager already has been disposed.</exception>
+            <since_tizen> 11 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraDeviceManager.GetVendorId(Tizen.Multimedia.CameraDevice)">
+            <summary>
+            Gets the vendor ID for given <param name="device"/>.
+            </summary>
+            <exception cref="T:System.ArgumentException">Invalid enumeration.</exception>
+            <exception cref="T:System.ObjectDisposedException">The CameraDeviceManager already has been disposed.</exception>
+            <since_tizen> 11 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraDeviceManager.GetDeviceInformation">
+            <summary>
+            Gets the current camera device information.
+            Retrieves all the supported camera devices and returns its information.
+            </summary>
+            <remarks>This method is only for backward compatibility. Please use SupportedDevices instead.</remarks>
+            <returns>
+            if camera device exist, returns list of <see cref="T:Tizen.Multimedia.CameraDeviceInformation"/>; otherwise returns Enumerable.Empty.
+            </returns>
+            <see also="WebRTCState"/>
+        </member>
+        <member name="E:Tizen.Multimedia.CameraDeviceManager.DeviceConnectionChanged">
+            <summary>
+            An event that occurs when camera device is connected or disconnected.
+            </summary>
+            <exception cref="T:System.ObjectDisposedException">The CameraDeviceManager already has been disposed.</exception>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraDeviceManager.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the camera.
+            </summary>
+            <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraDeviceManager.Dispose">
+            <summary>
+            Releases all resources used by the camera.
+            </summary>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraDeviceInformation">
+            <summary>
+            Provides the ability to get camera device information.
+            </summary>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraDeviceInformation.#ctor(Tizen.Multimedia.CameraDeviceType,Tizen.Multimedia.CameraDevice,System.String,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tizen.Multimedia.CameraDeviceInformation"/> class.
+            </summary>
+            <param name="type">The camera type</param>
+            <param name="device">The camera device</param>
+            <param name="name">The name of camera device</param>
+            <param name="id">The ID of camera device</param>
+            <param name="numberOfExtraStream">The number of extra streams</param>
+            <exception cref="T:System.ArgumentException">Invalid enumeration.</exception>
+            <exception cref="T:System.ArgumentNullException">name or id is null.</exception>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraDeviceInformation.Type">
+            <summary>
+            Gets the camera device type.
+            </summary>
+            <value><see cref="T:Tizen.Multimedia.CameraDeviceType"/></value>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraDeviceInformation.Device">
+            <summary>
+            Gets the <see cref="T:Tizen.Multimedia.CameraDevice"/>.
+            </summary>
+            <value><see cref="T:Tizen.Multimedia.CameraDevice"/></value>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraDeviceInformation.Name">
+            <summary>
+            Gets the camera device name.
+            </summary>
+            <value>The camera device name</value>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraDeviceInformation.Id">
+            <summary>
+            Gets the camera device ID.
+            </summary>
+            <value>The camera device ID.</value>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraDeviceInformation.NumberOfExtraStream">
+            <summary>
+            Gets the number of extra streams.
+            </summary>
+            <value>The number of extra streams.</value>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraDeviceInformation.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+            <returns>A string that represents the current object.</returns>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraDeviceStateChangedEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Tizen.Multimedia.Camera.DeviceStateChanged"/> event.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraDeviceStateChangedEventArgs.Device">
+            <summary>
+            Gets the camera device type.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraDeviceStateChangedEventArgs.State">
+            <summary>
+            Gets the current state of the camera device.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraDisplaySettings">
+            <summary>
+            The CameraDisplay class allows you to manage display for the camera.
+            It allows to set and get various display properties, such as
+            rotation, display visibility, and display mode.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraDisplaySettings.Mode">
+            <summary>
+            The display mode.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <remarks>
+            This property is meaningful only in overlay or EVAS surface display type.
+            </remarks>
+            <value>A <see cref="T:Tizen.Multimedia.CameraDisplayMode"/> that specifies the display mode.</value>
+            <exception cref="T:System.ArgumentException">Display mode type is incorrect.</exception>
+            <exception cref="T:System.ObjectDisposedException" > The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraDisplaySettings.Visible">
+            <summary>
+            The display visibility.
+            </summary>
+            <value>true if camera display is visible, otherwise false.</value>
+            <since_tizen> 3 </since_tizen>
+            <remarks>
+            This property is meaningful only in overlay or EVAS surface display type.
+            </remarks>
+            <exception cref="T:System.ObjectDisposedException" > The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraDisplaySettings.Rotation">
+            <summary>
+            The display rotation.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <remarks>
+            This property is meaningful only in overlay or EVAS surface display type.
+            </remarks>
+            <value>A <see cref="P:Tizen.Multimedia.CameraDisplaySettings.Rotation"/> that specifies the rotation of the camera device.</value>
+            <exception cref="T:System.ArgumentException">Display rotation type is incorrect.</exception>
+            <exception cref="T:System.ObjectDisposedException" > The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraDisplaySettings.Flip">
+            <summary>
+            The display flip.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <remarks>
+            This property is meaningful only in overlay or EVAS surface display type.
+            </remarks>
+            <value>A <see cref="T:Tizen.Multimedia.Flips"/> that specifies the camera flip type.</value>
+            <exception cref="T:System.ArgumentException">Display flip type is incorrect.</exception>
+            <exception cref="T:System.ObjectDisposedException" > The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraDisplaySettings.RoiArea">
+            <summary>
+            the ROI(Region Of Interest) area of display.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <remarks>
+            This property is meaningful only in overlay or EVAS surface display type.
+            </remarks>
+            <exception cref="T:System.ObjectDisposedException" > The camera has already been disposed. </exception>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraDevice">
+            <summary>
+            Enumeration for the camera device.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDevice.Default">
+            <summary>
+            The CameraDevice will be decided automatically by internal policy, if CameraDeviceManager is supported.
+            </summary>
+            <since_tizen> 9 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDevice.Rear">
+            <summary>
+            The rear camera device.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDevice.Front">
+            <summary>
+            The front camera device.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDevice.CameraDevice0">
+            <summary>
+            The primary camera device.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDevice.CameraDevice1">
+            <summary>
+            The secondary camera device.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDevice.CameraDevice2">
+            <summary>
+            The third camera device.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDevice.CameraDevice3">
+            <summary>
+            The fourth camera device.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDevice.CameraDevice4">
+            <summary>
+            The fifth camera device.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDevice.CameraDevice5">
+            <summary>
+            The sixth camera device.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDevice.CameraDevice6">
+            <summary>
+            The seventh camera device.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDevice.CameraDevice7">
+            <summary>
+            The eighth camera device.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDevice.CameraDevice8">
+            <summary>
+            The ninth camera device.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDevice.CameraDevice9">
+            <summary>
+            The tenth camera device.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraDeviceState">
+            <summary>
+            Enumeration for the camera device state.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDeviceState.NotOpened">
+            <summary>
+            Not opened.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDeviceState.Opened">
+            <summary>
+            Opened.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDeviceState.Working">
+            <summary>
+            Now previewing or capturing or is being used for the video recording.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraFacingDirection">
+            <summary>
+            Enumeration for the facing direction of camera module.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFacingDirection.Rear">
+            <summary>
+            Rear direction.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFacingDirection.Front">
+            <summary>
+            Front direction.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraFlashState">
+            <summary>
+            Enumeration for the current flash state.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFlashState.NotUsed">
+            <summary>
+            Flash is not used now through the camera API.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFlashState.Used">
+            <summary>
+            Flash is used now through the camera API.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraFocusState">
+            <summary>
+            Enumeration for the camera focus state.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFocusState.Released">
+            <summary>
+            Focus released.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFocusState.Ongoing">
+            <summary>
+            Focus in progress.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFocusState.Focused">
+            <summary>
+            Focus succeeded.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFocusState.Failed">
+            <summary>
+            Focus failed.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraPixelFormat">
+            <summary>
+            Enumeration for the camera pixel format.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Invalid">
+            <summary>
+            Invalid pixel format.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Nv12">
+            <summary>
+            NV12 pixel format.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Nv12t">
+            <summary>
+            NV12 tiled pixel format.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Nv16">
+            <summary>
+            NV16 pixel format.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Nv21">
+            <summary>
+            NV21 pixel format.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Yuyv">
+            <summary>
+            YUYV(YUY2) pixel format.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Uyvy">
+            <summary>
+            UYVY pixel format.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Yuv422Planar">
+            <summary>
+            YUV422(Y:U:V) planar pixel format.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.I420">
+            <summary>
+            I420 pixel format.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Yv12">
+            <summary>
+            YV12 pixel format.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Rgb565">
+            <summary>
+            RGB565 pixel format.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Rgb888">
+            <summary>
+            RGB565 pixel format.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Rgba">
+            <summary>
+            RGBA pixel format.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Argb">
+            <summary>
+            ARGB pixel format.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Jpeg">
+            <summary>
+            Encoded pixel format.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.H264">
+            <summary>
+            Encoded pixel format : H264.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Invz">
+            <summary>
+            Depth pixel format.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Mjpeg">
+            <summary>
+            Encoded pixel format : Motion JPEG
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Vp8">
+            <summary>
+            Encoded pixel format : VP8
+            </summary>
+            <since_tizen> 9 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPixelFormat.Vp9">
+            <summary>
+            Encoded pixel format : VP9
+            </summary>
+            <since_tizen> 9 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraPolicy">
+            <summary>
+            Enumeration for the camera policy.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPolicy.None">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPolicy.Security">
+            <summary>
+            Security policy.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPolicy.ResourceConflict">
+            <summary>
+            Resource conflict.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraState">
+            <summary>
+            Enumeration for the camera state.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraState.None">
+            <summary>
+            Before creating.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraState.Created">
+            <summary>
+            Created, but not initialized yet.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraState.Preview">
+            <summary>
+            Preview.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraState.Capturing">
+            <summary>
+            While capturing.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraState.Captured">
+            <summary>
+            After capturing.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraAutoFocusMode">
+            <summary>
+            Enumeration for the auto-focus mode.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraAutoFocusMode.None">
+            <summary>
+            Auto-focus is not set.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraAutoFocusMode.Normal">
+            <summary>
+            Auto-focus is in the normal mode.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraAutoFocusMode.Macro">
+            <summary>
+            Auto-focus is in the macro mode (close distance).
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraAutoFocusMode.Full">
+            <summary>
+            Auto-focus is in the full mode (all range scan, limited by device spec).
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraEffectMode">
+            <summary>
+            Enumeration for the color tone, which provides the impression of looking through a tinted glass.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.None">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Mono">
+            <summary>
+            Mono.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Sepia">
+            <summary>
+            Sepia.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Negative">
+            <summary>
+            Negative.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Blue">
+            <summary>
+            Blue.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Green">
+            <summary>
+            Green.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Aqua">
+            <summary>
+            Aqua.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Violet">
+            <summary>
+            Violet.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Orange">
+            <summary>
+            Orange.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Gray">
+            <summary>
+            Gray.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Red">
+            <summary>
+            Red.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Antique">
+            <summary>
+            Antique.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Warm">
+            <summary>
+            Warm.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Pink">
+            <summary>
+            Pink.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Yellow">
+            <summary>
+            Yellow.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Purple">
+            <summary>
+            Purple.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Emboss">
+            <summary>
+            Emboss.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Outline">
+            <summary>
+            Outline.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Solarization">
+            <summary>
+            Solarization.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Sketch">
+            <summary>
+            Sketch.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Washed">
+            <summary>
+            Washed.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.VintageWarm">
+            <summary>
+            Vintage warm.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.VintageCold">
+            <summary>
+            Vintage cold.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Posterization">
+            <summary>
+            Posterization.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.Cartoon">
+            <summary>
+            Cartoon.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.SelectiveRed">
+            <summary>
+            Selective color - red.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.SelectiveGreen">
+            <summary>
+            Selective color - green.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.SelectiveBlue">
+            <summary>
+            Selective color - blue.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.SelectiveYellow">
+            <summary>
+            Selective color - yellow.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.SelectiveRedYellow">
+            <summary>
+            Selective color - red and yellow.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraEffectMode.OtherGraphics">
+            <summary>
+            Other graphic effects.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraExposureMode">
+            <summary>
+            Enumeration for the camera exposure modes.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraExposureMode.Off">
+            <summary>
+            Off.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraExposureMode.All">
+            <summary>
+            All mode.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraExposureMode.Center">
+            <summary>
+            Center mode.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraExposureMode.Spot">
+            <summary>
+            Spot mode.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraExposureMode.Custom">
+            <summary>
+            Custom mode.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraExposureMode.ShutterPriority">
+            <summary>
+            Shutter priority mode.
+            </summary>
+            <since_tizen> 11 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraExposureMode.AperturePriority">
+            <summary>
+            Aperture priority mode.
+            </summary>
+            <since_tizen> 11 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraFlashMode">
+            <summary>
+            Enumeration for the flash mode.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFlashMode.Off">
+            <summary>
+            Always off.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFlashMode.On">
+            <summary>
+            Always splashes.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFlashMode.Auto">
+            <summary>
+            Depending on intensity of light, strobe starts to flash.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFlashMode.RedEyeReduction">
+            <summary>
+            Red eye reduction. Multiple flash before capturing.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFlashMode.SlowSync">
+            <summary>
+            Slow sync curtain synchronization.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFlashMode.FrontCurtain">
+            <summary>
+            Front curtain synchronization.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFlashMode.RearCurtain">
+            <summary>
+            Rear curtain synchronization.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFlashMode.Permanent">
+            <summary>
+            Keep turned on until turning off.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraFps">
+            <summary>
+            Enumeration for the preview fps.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFps.Auto">
+            <summary>
+            Auto fps.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFps.Fps7">
+            <summary>
+            7 fps.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFps.Fps8">
+            <summary>
+            8 fps.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFps.Fps15">
+            <summary>
+            15 fps.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFps.Fps20">
+            <summary>
+            20 fps.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFps.Fps24">
+            <summary>
+            24 fps.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFps.Fps25">
+            <summary>
+            25 fps.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFps.Fps30">
+            <summary>
+            30 fps.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFps.Fps60">
+            <summary>
+            60 fps.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFps.Fps90">
+            <summary>
+            90 fps.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraFps.Fps120">
+            <summary>
+            120 fps.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraHdrMode">
+            <summary>
+            Enumeration for the HDR capture mode.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraHdrMode.Disable">
+            <summary>
+            Disable the HDR capture.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraHdrMode.Enable">
+            <summary>
+            Enable the HDR capture.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraHdrMode.KeepOriginal">
+            <summary>
+            Enable the HDR capture mode and keep original image data.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraIsoLevel">
+            <summary>
+            Enumeration for the ISO levels of the camera.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraIsoLevel.Auto">
+            <summary>
+            ISO auto mode.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraIsoLevel.Iso50">
+            <summary>
+            ISO 50.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraIsoLevel.Iso100">
+            <summary>
+            ISO 100.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraIsoLevel.Iso200">
+            <summary>
+            ISO 200.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraIsoLevel.Iso400">
+            <summary>
+            ISO 400.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraIsoLevel.Iso800">
+            <summary>
+            ISO 800.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraIsoLevel.Iso1600">
+            <summary>
+            ISO 1600.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraIsoLevel.Iso3200">
+            <summary>
+            ISO 3200.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraPtzMoveType">
+            <summary>
+            Enumeration for the PTZ(Pan Tilt Zoom) movement type.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPtzMoveType.Absoulute">
+            <summary>
+            Move to a specific coordinate position.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPtzMoveType.Relative">
+            <summary>
+            Move to a specific distance from the current position.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraPtzType">
+            <summary>
+            Enumeration for the PTZ(Pan Tilt Zoom) type.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPtzType.Mechanical">
+            <summary>
+            Move the camera device physically.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraPtzType.Electronic">
+            <summary>
+            Zoom digitally and move into portion of the image.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraSceneMode">
+            <summary>
+            Enumeration for the camera scene mode.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraSceneMode.Normal">
+            <summary>
+            Normal.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraSceneMode.Portrait">
+            <summary>
+            Portrait.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraSceneMode.Landscape">
+            <summary>
+            Landscape.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraSceneMode.Sports">
+            <summary>
+            Sports.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraSceneMode.PartyAndIndoor">
+            <summary>
+            Party and indoor.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraSceneMode.BeachAndIndoor">
+            <summary>
+            Beach and indoor.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraSceneMode.Sunset">
+            <summary>
+            Sunset.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraSceneMode.DuskAndDawn">
+            <summary>
+            Dusk and dawn.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraSceneMode.FallColor">
+            <summary>
+            Fall.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraSceneMode.NightScene">
+            <summary>
+            Night scene.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraSceneMode.FireWork">
+            <summary>
+            Firework.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraSceneMode.Text">
+            <summary>
+            Text.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraSceneMode.ShowWindow">
+            <summary>
+            Show window.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraSceneMode.CandleLight">
+            <summary>
+            Candle light.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraSceneMode.BackLight">
+            <summary>
+            Backlight.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraSceneMode.Aqua">
+            <summary>
+            Aqua.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraTagOrientation">
+            <summary>
+            Enumeration for the orientation values of tag.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraTagOrientation.TopLeft">
+            <summary>
+            Row #0 is at the top, column #0 is to the left.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraTagOrientation.TopRight">
+            <summary>
+            Row #0 is at the top, column #0 is to the right.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraTagOrientation.BottomRight">
+            <summary>
+            Row #0 is at the bottom, column #0 is to the right.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraTagOrientation.BottomLeft">
+            <summary>
+            Row #0 is at the bottom, column #0 is to the left.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraTagOrientation.LeftTop">
+            <summary>
+            Row #0 is at the left, column #0 is to the top.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraTagOrientation.RightTop">
+            <summary>
+            Row #0 is at the right, column #0 is to the top.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraTagOrientation.RightBottom">
+            <summary>
+            Row #0 is at the right, column #0 is to the bottom.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraTagOrientation.LeftBottom">
+            <summary>
+            Row #0 is at the left, column #0 is to the bottom.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraTheaterMode">
+            <summary>
+            Enumeration for the theater mode.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraTheaterMode.Disable">
+            <summary>
+            Disable the theater mode - the external display shows same image as the device display.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraTheaterMode.Clone">
+            <summary>
+            Clone the mode - the preview image is displayed on an external display with full screen mode. Also, the preview image is shown by the UI on the device display.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraTheaterMode.Enable">
+            <summary>
+            Enable the theater mode - the preview image is displayed on an external display with full screen mode, but the preview image is not shown on the device display.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraWhiteBalance">
+            <summary>
+            Enumeration for the white balance levels of the camera.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraWhiteBalance.None">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraWhiteBalance.Automatic">
+            <summary>
+            Automatic.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraWhiteBalance.Daylight">
+            <summary>
+            Daylight.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraWhiteBalance.Cloudy">
+            <summary>
+            Cloudy.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraWhiteBalance.Fluorescent">
+            <summary>
+            Fluorescent.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraWhiteBalance.Incandescent">
+            <summary>
+            Incandescent.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraWhiteBalance.Shade">
+            <summary>
+            Shade.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraWhiteBalance.Horizon">
+            <summary>
+            Horizon.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraWhiteBalance.Flash">
+            <summary>
+            Flash.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraWhiteBalance.Custom">
+            <summary>
+            Custom.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraDisplayMode">
+            <summary>
+            Enumeration for the camera display mode.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDisplayMode.LetterBox">
+            <summary>
+            Letter box.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDisplayMode.OriginSize">
+            <summary>
+            Original size.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDisplayMode.Full">
+            <summary>
+            Full screen.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDisplayMode.CroppedFull">
+            <summary>
+            Cropped full screen.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDisplayMode.OriginOrLetterBox">
+            <summary>
+            Original size or letter box.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDisplayMode.CustomROI">
+            <summary>
+            Custom ROI.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraErrorCode">
+            <summary>
+            Enumeration for the camera failure error.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraErrorCode.DeviceError">
+            <summary>
+            Device Error.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraErrorCode.InvalidOperation">
+            <summary>
+            Internal error.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraErrorCode.OutOfMemory">
+            <summary>
+            Out of memory.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraErrorCode.ServiceDisconnected">
+            <summary>
+            Service is disconnected.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.PlaneType">
+            <summary>
+            Enumeration for the image datatype.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.PlaneType.SinglePlane">
+            <summary>
+            Single plane data.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.PlaneType.DoublePlane">
+            <summary>
+            Double plane data.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.PlaneType.TriplePlane">
+            <summary>
+            Triple plane data.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.PlaneType.EncodedPlane">
+            <summary>
+            Encoded plane data.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.PlaneType.DepthPlane">
+            <summary>
+            Depth plane data.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.PlaneType.RgbPlane">
+            <summary>
+            Rgb plane data.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraDeviceType">
+            <summary>
+            Enumeration for camera device type
+            </summary>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDeviceType.BuiltIn">
+            <summary>
+            Built-in camera.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDeviceType.Usb">
+            <summary>
+            USB camera.
+            </summary>
+        </member>
+        <member name="F:Tizen.Multimedia.CameraDeviceType.Network">
+            <summary>
+            Network camera.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraErrorOccurredEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Tizen.Multimedia.Camera.ErrorOccurred"/> event.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraErrorOccurredEventArgs.Error">
+            <summary>
+            Gets the camera error.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraErrorOccurredEventArgs.State">
+            <summary>
+            Gets the current state of the camera.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraException">
+            <summary>
+            The base exception class that is thrown when specific camera related error occurs.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tizen.Multimedia.CameraException"/> class.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tizen.Multimedia.CameraException"/> class with a specified error message.
+            </summary>
+            <param name="message">A specified error message.</param>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraDeviceException">
+            <summary>
+            The exception that is thrown when a camera device-related error occurs.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraDeviceException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tizen.Multimedia.CameraDeviceException"/> class.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraDeviceException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tizen.Multimedia.CameraDeviceException"/> class with a specified error message.
+            </summary>
+            <param name="message">A specified error message.</param>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraDeviceNotFoundException">
+            <summary>
+            The exception that is thrown when a camera device is not available.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraDeviceNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tizen.Multimedia.CameraDeviceNotFoundException"/> class.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraDeviceNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tizen.Multimedia.CameraDeviceNotFoundException"/> class with a specified error message.
+            </summary>
+            <param name="message">A specified error message.</param>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraFocusStateChangedEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Tizen.Multimedia.Camera.FocusStateChanged"/> event.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraFocusStateChangedEventArgs.State">
+            <summary>
+            Gets the focus state of the camera.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraInterruptedEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Tizen.Multimedia.Camera.Interrupted"/> event.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraInterruptedEventArgs.Previous">
+            <summary>
+            Gets the previous state of the camera.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraInterruptedEventArgs.Current">
+            <summary>
+            Gets the current state of the camera.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraInterruptedEventArgs.Policy">
+            <summary>
+            Gets the policy that interrupted the camera.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraInterruptStartedEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Tizen.Multimedia.Camera.InterruptStarted"/> event.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraInterruptStartedEventArgs.State">
+            <summary>
+            Gets the current state of the camera.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraInterruptStartedEventArgs.Policy">
+            <summary>
+            Gets the policy that interrupted the camera.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraSettings">
+            <summary>
+            The camera setting class provides methods/properties to get and
+            set basic camera attributes.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.SetAutoFocusArea(System.Int32,System.Int32)">
+            <summary>
+            Sets the auto focus area.
+            </summary>
+            <param name="x">X position.</param>
+            <param name="y">Y position.</param>
+            <since_tizen> 3 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+            <remarks>
+            <see cref="T:Tizen.Multimedia.CameraAutoFocusMode"/> should not be the <see cref="F:Tizen.Multimedia.CameraAutoFocusMode.None"/>.
+            </remarks>
+            /// <exception cref="T:System.ArgumentException">In case of invalid parameters.</exception>
+            <exception cref="T:System.InvalidOperationException">In case of any invalid operations.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.SetAutoFocusArea(Tizen.Multimedia.Point)">
+            <summary>
+            Sets the auto focus area.
+            </summary>
+            <param name="pos"><see cref="T:Tizen.Multimedia.Point"/> structure including X, Y position.</param>
+            <since_tizen> 3 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+            <remarks>
+            <see cref="T:Tizen.Multimedia.CameraAutoFocusMode"/> should not be the <see cref="F:Tizen.Multimedia.CameraAutoFocusMode.None"/>.
+            </remarks>
+            /// <exception cref="T:System.ArgumentException">In case of invalid parameters.</exception>
+            <exception cref="T:System.InvalidOperationException">In case of any invalid operations.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.ClearFocusArea">
+            <summary>
+            Clears the auto focus area.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.AutoFocusMode">
+            <summary>
+            The auto focus mode.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value>A <see cref="T:Tizen.Multimedia.CameraAutoFocusMode"/> that specifies the auto focus mode.</value>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.Contrast">
+            <summary>
+            The contrast level of the camera.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.AutoContrast">
+            <summary>
+            The auto contrast.
+            If true auto contrast is enabled, otherwise false.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.ContrastRange">
+            <summary>
+            Gets the available contrast value range.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <remarks>
+            If the mininum value is greater than the maximum value, it means this feature is not supported.
+            </remarks>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.Hue">
+            <summary>
+            The hue level of the camera.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.HueRange">
+            <summary>
+            Gets the available hue value range.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+            <remarks>
+            If HueRange returns null, it means that hue feature is not supported.
+            It can be checked also with <see cref="P:Tizen.Multimedia.CameraCapabilities.IsHueSupported"/>.
+            </remarks>
+            <seealso cref="P:Tizen.Multimedia.CameraSettings.Hue"/>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.Brightness">
+            <summary>
+            The brightness level of the camera.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.BrightnessRange">
+            <summary>
+            Gets the available brightness value range.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <remarks>
+            If the minimum value is greater than the maximum value, it means this feature is not supported.
+            </remarks>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.Exposure">
+            <summary>
+            The exposure value.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.ExposureMode">
+            <summary>
+            The exposure mode.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value>A <see cref="T:Tizen.Multimedia.CameraExposureMode"/> that specifies the exposure mode.</value>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.ExposureRange">
+            <summary>
+            Gets the available exposure value range.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <remarks>
+            If the minimum value is greater than the maximum value, it means this feature is not supported.
+            </remarks>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.Saturation">
+            <summary>
+            Gets or sets the camera saturation value.
+            </summary>
+            <since_tizen> 11 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.SaturationRange">
+            <summary>
+            Gets the available saturation value range.
+            </summary>
+            <since_tizen> 11 </since_tizen>
+            <remarks>
+            If the minimum value is greater than the maximum value, it means this feature is not supported.
+            </remarks>
+            <exception cref="T:System.NotSupportedException">Saturation is not supported.</exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.Sharpness">
+            <summary>
+            Gets or sets the camera sharpness value.
+            </summary>
+            <since_tizen> 11 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.SharpnessRange">
+            <summary>
+            Gets the available sharpness value range.
+            </summary>
+            <since_tizen> 11 </since_tizen>
+            <remarks>
+            If the minimum value is greater than the maximum value, it means this feature is not supported.
+            </remarks>
+            <exception cref="T:System.NotSupportedException">Sharpness is not supported.</exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.FocusLevel">
+            <summary>
+            Gets or sets the camera manual focus level.
+            </summary>
+            <remark>If user set this value for manual focus, auto focusing will be stopped.</remark>
+            <since_tizen> 11 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.FocusLevelRange">
+            <summary>
+            Gets the available manual focus level range.
+            </summary>
+            <since_tizen> 11 </since_tizen>
+            <remarks>
+            If the minimum value is greater than the maximum value, it means this feature is not supported.
+            </remarks>
+            <exception cref="T:System.NotSupportedException">Focus level is not supported.</exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.Gain">
+            <summary>
+            Gets or sets the camera gain value.
+            </summary>
+            <since_tizen> 11 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.GainRange">
+            <summary>
+            Gets the available gain value range.
+            </summary>
+            <since_tizen> 11 </since_tizen>
+            <remarks>
+            If the minimum value is greater than the maximum value, it means this feature is not supported.
+            </remarks>
+            <exception cref="T:System.NotSupportedException">Gain is not supported.</exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.GainStep">
+            <summary>
+            Gets the camera gain step value.
+            </summary>
+            <since_tizen> 11 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.WhiteBalanceTemperature">
+            <summary>
+            Gets or sets the camera white balance temperature value.
+            </summary>
+            <since_tizen> 11 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.WhiteBalanceTemperatureRange">
+            <summary>
+            Gets the available camera white balance temperature value range.
+            </summary>
+            <since_tizen> 11 </since_tizen>
+            <remarks>
+            If the minimum value is greater than the maximum value, it means this feature is not supported.
+            </remarks>
+            <exception cref="T:System.NotSupportedException">WhiteBalanceTemperatureRange is not supported.</exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.WhiteBalanceTemperatureStep">
+            <summary>
+            Gets the camera white balance temperature step value.
+            </summary>
+            <since_tizen> 11 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.ZoomLevel">
+            <summary>
+            The zoom level.
+            The range for the zoom level is received from the ZoomRange property.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.ZoomRange">
+            <summary>
+            Gets the available zoom value range.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <remarks>
+            If the minimum value is greater than the maximum value, it means this feature is not supported.
+            </remarks>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.WhiteBalance">
+            <summary>
+            The white balance mode.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value>A <see cref="T:Tizen.Multimedia.CameraWhiteBalance"/> that specifies the white balance mode.</value>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.IsoLevel">
+            <summary>
+            The ISO level.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value>A <see cref="T:Tizen.Multimedia.CameraIsoLevel"/> that specifies the ISO level.</value>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.ImageQuality">
+            <summary>
+            The quality of the image.
+            The range for the image quality is 1 to 100.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.PreviewFps">
+            <summary>
+            The preview frame rate.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value>A <see cref="T:Tizen.Multimedia.CameraFps"/> that specifies the preview frame rate.</value>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.PreviewResolution">
+            <summary>
+            Gets or sets the resolution of the preview.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ArgumentException">In case of invalid parameters.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.RecommendedPreviewResolution">
+            <summary>
+            Gets the recommended preview resolution.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <remarks>
+            Depending on the capture resolution aspect ratio and the display resolution,
+            the recommended preview resolution is determined.
+            </remarks>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.PreviewPixelFormat">
+            <summary>
+            The preview data format.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value>A <see cref="T:Tizen.Multimedia.CameraPixelFormat"/> that specifies the pixel format of the preview data.</value>
+            <exception cref="T:System.ArgumentException">In case of invalid parameters.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.CaptureResolution">
+            <summary>
+            Resolution of the captured image.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ArgumentException">In case of invalid parameters.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.CapturePixelFormat">
+            <summary>
+            Format of an image to be captured.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value>A <see cref="T:Tizen.Multimedia.CameraPixelFormat"/> that specifies the pixel format of captured image.</value>
+            <exception cref="T:System.ArgumentException">In case of invalid parameters.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.EncodedPreviewBitrate">
+            <summary>
+            The bit rate of the encoded preview.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.EncodedPreviewGopInterval">
+            <summary>
+            The GOP(Group Of Pictures) interval of the encoded preview.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.TheaterMode">
+            <summary>
+            The theater mode.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value>A <see cref="T:Tizen.Multimedia.CameraTheaterMode"/> that specifies the theater mode.</value>
+            <remarks>
+            If you want to display the preview image on the external display with the full screen mode,
+            use this property.
+            </remarks>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.Effect">
+            <summary>
+            The camera effect mode.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value>A <see cref="T:Tizen.Multimedia.CameraEffectMode"/> that specifies the effect mode.</value>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.SceneMode">
+            <summary>
+            The scene mode.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value>A <see cref="T:Tizen.Multimedia.CameraSceneMode"/> that specifies the scene mode.</value>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.FlashMode">
+            <summary>
+            The camera's flash mode.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value>A <see cref="T:Tizen.Multimedia.CameraFlashMode"/> that specifies the flash mode.</value>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.LensOrientation">
+            <summary>
+            Gets the camera lens orientation angle.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.StreamRotation">
+            <summary>
+            The stream rotation.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value>A <see cref="T:Tizen.Multimedia.Rotation"/> that specifies the rotation of camera device.</value>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.StreamFlip">
+            <summary>
+            The stream flip.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value>A <see cref="T:Tizen.Multimedia.Flips"/> that specifies the camera flip type.</value>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.HdrMode">
+            <summary>
+            The mode of the HDR(High dynamic range) capture.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value>A <see cref="T:Tizen.Multimedia.CameraHdrMode"/> that specifies the HDR mode.</value>
+            <remarks>
+            Taking multiple pictures at different exposure levels and intelligently stitching them together,
+            so that we eventually arrive at a picture that is representative in both dark and bright areas.
+            If this attribute is set, then event handler set for the HdrCaptureProgress event is invoked.
+            </remarks>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.AntiShake">
+            <summary>
+            The anti shake feature.
+            If true, the antishake feature is enabled, otherwise false.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.VideoStabilization">
+            <summary>
+            Enables or disables the video stabilization feature.
+            If true, video stabilization is enabled, otherwise false.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <remarks>
+            If video stabilization is enabled, zero shutter lag is disabled.
+            This feature is used to record a video.
+            </remarks>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.DisableShutterSound(System.Boolean)">
+            <summary>
+            Turn the shutter sound on or off, if it is permitted by policy.
+            </summary>
+            <param name="shutterSound">Shutter sound On/Off flag</param>
+            <since_tizen> 4 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+            <remarks>
+            If this value is true, shutter sound will be disabled, otherwise enabled.
+            In some countries, this operation is not permitted.
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Disabling shutter sound is not permitted.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.PtzType">
+            <summary>
+            Sets the type of the PTZ(Pan Tilt Zoom). Mechanical or electronic.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <value>A <see cref="T:Tizen.Multimedia.CameraPtzType"/> that specifies the type of the PTZ.</value>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.SetPan(Tizen.Multimedia.CameraPtzMoveType,System.Int32)">
+            <summary>
+            Sets the position to move horizontally.
+            </summary>
+            <param name="type">The PTZ move type. <seealso cref="T:Tizen.Multimedia.CameraPtzMoveType"/>.</param>
+            <param name="panStep">The pan step.</param>
+            <since_tizen> 3 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+            <exception cref="T:System.ArgumentException">In case of invalid parameters.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.GetPan">
+            <summary>
+            Gets the current position of the camera.
+            </summary>
+            <returns>Returns the camera's horizontal position.</returns>
+            <since_tizen> 3 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.SetTilt(Tizen.Multimedia.CameraPtzMoveType,System.Int32)">
+            <summary>
+            Sets the position to move vertically.
+            </summary>
+            <param name="type">the PTZ move type.</param>
+            <param name="tiltStep">The tilt step.</param>
+            <since_tizen> 3 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+            <exception cref="T:System.ArgumentException">In case of invalid parameters.</exception>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.GetTilt">
+            <summary>
+            Gets the current position of the camera.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+            <returns>Returns the current vertical position.</returns>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.PanRange">
+            <summary>
+            Gets the lower limit and the upper limit for the pan position.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <remarks>
+            If the minimum value is greater than the maximum value, it means this feature is not supported.
+            </remarks>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.TiltRange">
+            <summary>
+            Gets the lower limit and the upper limit for the tilt position.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <remarks>
+            If the minimum value is greater than the maximum value, it means this feature is not supported.
+            </remarks>
+            <exception cref="T:System.NotSupportedException">In case of this feature is not supported.</exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.EnableTag">
+            <summary>
+            The scene mode.
+            </summary>
+            <value>true if EXIF tags are enabled in the JPEG file, otherwise false.</value>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.ImageDescriptionTag">
+            <summary>
+            The camera image description in the EXIF tag.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.SoftwareTag">
+            <summary>
+            The software information in the EXIF tag.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.GeoTag">
+            <summary>
+            The geo tag(GPS data) in the EXIF tag.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.RemoveGeoTag">
+            <summary>
+            Removes the geo tag(GPS data) in the EXIF(EXchangeable Image File format) tag.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <feature> http://tizen.org/feature/camera </feature>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraSettings.OrientationTag">
+            <summary>
+            The camera orientation in the tag.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.GetExtraPreviewStreamInfo(System.Int32)">
+            <summary>
+            Gets the information of extra preview stream.
+            </summary>
+            <param name="streamId">The stream ID.</param>
+            <returns>A extra stream information.</returns>
+            <since_tizen> 10 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.SetExtraPreviewStreamInfo(Tizen.Multimedia.ExtraPreviewStreamInfo)">
+            <summary>
+            Sets the information of extra preview stream.
+            </summary>
+            <param name="info">The extra preview stream information.</param>
+            <since_tizen> 10 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.GetExtraPreviewBitrate(System.Int32)">
+            <summary>
+            Gets the bitrate of extra preview with given stream ID.
+            </summary>
+            <param name="streamId">The stream ID.</param>
+            <returns>A bitrate of extra stream.</returns>
+            <since_tizen> 10 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.SetExtraPreviewBitrate(System.Int32,System.Int32)">
+            <summary>
+            Sets the bitrate of extra preview with given stream ID.
+            </summary>
+            <param name="streamId">The stream ID.</param>
+            <param name="bitrate">The bitrate for extra preview.</param>
+            <since_tizen> 10 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.GetExtraPreviewGopInterval(System.Int32)">
+            <summary>
+            Gets the GOP(Group Of Pictures) interval of extra preview with given stream ID.
+            </summary>
+            <param name="streamId">The stream ID.</param>
+            <returns>A GOP interval of extra preview.</returns>
+            <since_tizen> 10 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.SetExtraPreviewGopInterval(System.Int32,System.Int32)">
+            <summary>
+            Sets The GOP(Group Of Pictures) interval of extra preview with given stream ID.
+            </summary>
+            <param name="streamId">The stream ID.</param>
+            <param name="gopInterval">The GOP interval for extra preview.</param>
+            <since_tizen> 10 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.GetExtraPreviewRotation(System.Int32)">
+            <summary>
+            Gets the rotation of preview frame with given stream ID.
+            </summary>
+            <param name="streamId">The stream ID.</param>
+            <returns>A rotation of extra preview.</returns>
+            <since_tizen> 10 </since_tizen>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.GetExtraPreviewRotation">
+            <summary>
+            Gets the rotation of preview frame.
+            </summary>
+            <returns>A rotation of preview frame.</returns>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="M:Tizen.Multimedia.CameraSettings.GetPreviewFrameRotation">
+            <summary>
+            Gets the rotation of preview frame.
+            </summary>
+            <returns>A rotation of preview frame.</returns>
+            <exception cref="T:System.ObjectDisposedException">The camera has already been disposed. </exception>
+        </member>
+        <member name="T:Tizen.Multimedia.ExtraPreviewStreamInfo">
+            <summary>
+            Provides the ability to get the information of extra preview stream.
+            </summary>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.ExtraPreviewStreamInfo.#ctor(System.Int32,Tizen.Multimedia.CameraPixelFormat,Tizen.Multimedia.Size,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tizen.Multimedia.ExtraPreviewStreamInfo"/> class.
+            </summary>
+            <param name="streamId">The stream ID.</param>
+            <param name="format">The preview format.</param>
+            <param name="size">The preview resolution.</param>
+            <param name="fps">The FPS.</param>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.ExtraPreviewStreamInfo.StreamId">
+            <summary>
+            Gets the stream ID.
+            </summary>
+            <value>The stream ID.</value>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.ExtraPreviewStreamInfo.Format">
+            <summary>
+            Gets the extra preview format.
+            </summary>
+            <value>The camera pixel format.</value>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.ExtraPreviewStreamInfo.Size">
+            <summary>
+            Gets the extra preview resolution.
+            </summary>
+            <value>A resolution of extra preview.</value>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.ExtraPreviewStreamInfo.Fps">
+            <summary>
+            Gets the FPS.
+            </summary>
+            <value></value>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.ExtraPreviewStreamInfo.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+            <returns>A string that represents the current object.</returns>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.CameraStateChangedEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Tizen.Multimedia.Camera.StateChanged"/> event.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraStateChangedEventArgs.Previous">
+            <summary>
+            Gets the previous state of the camera.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraStateChangedEventArgs.Current">
+            <summary>
+            Gets the current state of the camera.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.CameraStateChangedEventArgs.ByPolicy">
+            <summary>
+            Gets the value indicating whether the state is changed by policy.
+            </summary>
+            <value>
+            true if the state changed by policy, such as resource conflict or security, otherwise false.
+            </value>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.DepthPlane">
+            <summary>
+            The class containing the depth data for subject distance.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.DepthPlane.Data">
+            <summary>
+            The buffer containing the depth data.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.DoublePlane">
+            <summary>
+            The class containing image data which has two planes.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.DoublePlane.Y">
+            <summary>
+            The Y plane data.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.DoublePlane.UV">
+            <summary>
+            The UV plane data.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.EncodedPlane">
+            <summary>
+            The class containing the encoded image data.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.EncodedPlane.Data">
+            <summary>
+            The buffer containing the encoded image data.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.EncodedPlane.IsDeltaFrame">
+            <summary>
+            The flag indicating whether the current frame is a delta frame or not.
+            </summary>
+            <since_tizen> 8 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.EncodedPlane.UsedSize">
+            <summary>
+            The actually used buffer size.
+            </summary>
+        </member>
+        <member name="T:Tizen.Multimedia.ExtraPreviewEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Tizen.Multimedia.Camera.ExtraPreview"/> event.
+            </summary>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.ExtraPreviewEventArgs.Preview">
+            <summary>
+            Gets the preview frame data.
+            </summary>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.ExtraPreviewEventArgs.StreamId">
+            <summary>
+            Gets the stream ID.
+            </summary>
+            <since_tizen> 10 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.FaceDetectedEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Tizen.Multimedia.Camera.FaceDetected"/> event.
+            If the user needs to keep the faces data, the user has to copy the data.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.FaceDetectedEventArgs.Faces">
+            <summary>
+            Gets the list containing faces of type <see cref="T:Tizen.Multimedia.FaceDetectionData"/>.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.FaceDetectionData">
+            <summary>
+            The class contains the details of the detected face.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.FaceDetectionData.Id">
+            <summary>
+            The ID of each face.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.FaceDetectionData.Score">
+            <summary>
+            The confidence level for the detection of the face.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.FaceDetectionData.X">
+            <summary>
+            The X co-ordinate of the face.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.FaceDetectionData.Y">
+            <summary>
+            The Y co-ordinate of the face.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.FaceDetectionData.Width">
+            <summary>
+            The width of the face.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.FaceDetectionData.Height">
+            <summary>
+            The height of the face.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.HdrCaptureProgressEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Tizen.Multimedia.Camera.HdrCaptureProgress"/> event.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.HdrCaptureProgressEventArgs.Percent">
+            <summary>
+            Gets the HDR Capture progress in percent.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.IPreviewPlane">
+            <summary>
+            Provides interface for various preview plane types.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.Location">
+            <summary>
+            The location class containing GPS data details.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="M:Tizen.Multimedia.Location.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            The public constructor.
+            </summary>
+            <param name="latitude">The latitude data.</param>
+            <param name="longitude">The longitude data.</param>
+            <param name="altitude">The altitude data.</param>
+            <feature> http://tizen.org/feature/camera </feature>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.Location.Latitude">
+            <summary>
+            The latitude data.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.Location.Longitude">
+            <summary>
+            The longitude data.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.Location.Altitude">
+            <summary>
+            The altitude data.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.MediaPacketPreviewEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Tizen.Multimedia.Camera.MediaPacketPreview"/> event.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.MediaPacketPreviewEventArgs.Packet">
+            <summary>
+            Gets the media packet data.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.PreviewEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Tizen.Multimedia.Camera.Preview"/> event.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.PreviewEventArgs.Preview">
+            <summary>
+            Gets the preview frame data.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.PreviewFrame">
+            <summary>
+            The class containing the preview image data.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.PreviewFrame.Format">
+            <summary>
+            The pixel format of the image.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.PreviewFrame.Resolution">
+            <summary>
+            The resolution of the preview image.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.PreviewFrame.TimeStamp">
+            <summary>
+            The time stamp of the preview frame.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.PreviewFrame.PlaneType">
+            <summary>
+            The type of the preview plane. <see cref="T:Tizen.Multimedia.PlaneType"/>
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.PreviewFrame.Plane">
+            <summary>
+            The buffer including the preview frame.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.RgbPlane">
+            <summary>
+            The class containing the rgb data for subject distance.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.RgbPlane.Data">
+            <summary>
+            The buffer containing the rgb data.
+            </summary>
+            <since_tizen> 5 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.SinglePlane">
+            <summary>
+            The class containing the image data, which has a single plane.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.SinglePlane.Data">
+            <summary>
+            The YUV plane data.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.StillImage">
+            <summary>
+            The class containing the captured still image.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.StillImage.Format">
+            <summary>
+            The pixel format of the still image.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.StillImage.Resolution">
+            <summary>
+            The resolution of the still image.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.StillImage.Data">
+            <summary>
+            The buffer containing the still image.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.StillImage.Exif">
+            <summary>
+            The Exif data describing additional metadata of still image.
+            Please refer Exif specification for more details.
+            </summary>
+            <since_tizen> 4 </since_tizen>
+        </member>
+        <member name="T:Tizen.Multimedia.TriplePlane">
+            <summary>
+            The class containing image data which has three planes.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.TriplePlane.Y">
+            <summary>
+            The Y plane data.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.TriplePlane.U">
+            <summary>
+            The U plane data.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+        <member name="P:Tizen.Multimedia.TriplePlane.V">
+            <summary>
+            The V plane data.
+            </summary>
+            <since_tizen> 3 </since_tizen>
+        </member>
+    </members>
+</doc>
